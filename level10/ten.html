@@ -1,329 +1,123 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Level 10: Final Project - Complete Website</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Level 10: Final Project - Complete Website</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
 </head>
+
 <body class="bg-gray-50">
-    <!-- 
-        FINAL PROJECT: Build a Complete Landing Page
-        Combine all concepts learned from Levels 1-9
-        
-        Instructions:
-        1. Create a complete landing page with:
-           - Header with navigation
-           - Hero section
-           - Features section
-           - Testimonials
-           - Footer
-        2. Make it fully responsive
-        3. Use all Tailwind concepts learned
-        4. Add hover effects and transitions
-        5. Ensure proper spacing and typography
-    -->
 
-    <!-- Header / Navigation -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <nav class="container mx-auto px-4 py-4">
-            <div class="flex justify-between items-center">
-                <div class="text-2xl font-bold text-blue-600">YourBrand</div>
-                <div class="hidden md:flex items-center gap-6">
-                    <a href="#home" class="text-gray-700 hover:text-blue-600 transition-colors">Home</a>
-                    <a href="#features" class="text-gray-700 hover:text-blue-600 transition-colors">Features</a>
-                    <a href="#testimonials" class="text-gray-700 hover:text-blue-600 transition-colors">Testimonials</a>
-                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
-                    <button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                        Get Started
-                    </button>
-                </div>
-                <button class="md:hidden text-gray-700 text-2xl">☰</button>
-            </div>
-        </nav>
-        <!-- 
-            sticky top-0: Sticky header that stays at top when scrolling
-            z-50: High z-index to appear above content
-            container mx-auto: Centered container with max-width
-            hidden md:flex: Hide on mobile, show on desktop
-            Responsive navigation pattern
-        -->
-    </header>
+<!-- Header / Navigation -->
 
-    <!-- Hero Section -->
-    <section id="home" class="bg-gradient-to-br from-blue-600 to-purple-600 text-white py-20">
-        <div class="container mx-auto px-4">
-            <div class="max-w-3xl mx-auto text-center">
-                <h1 class="text-4xl md:text-6xl font-bold mb-6">
-                    Welcome to Your Future
-                </h1>
-                <p class="text-xl md:text-2xl mb-8 text-blue-100">
-                    Build amazing websites with Tailwind CSS. Learn, practice, and master modern web design.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors shadow-lg">
-                        Get Started
-                    </button>
-                    <button class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                        Learn More
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- 
-            bg-gradient-to-br: Diagonal gradient background
-            py-20: Large vertical padding
-            text-center: Center aligned text
-            max-w-3xl: Maximum width for readability
-            flex-col sm:flex-row: Stack on mobile, horizontal on desktop
-            Hero sections create strong first impressions
-        -->
-    </section>
+<header class="bg-white shadow-md sticky top-0 z-50">
 
-    <!-- Features Section -->
-    <section id="features" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
-                Amazing Features
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                    <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-3xl">⚡</span>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Fast & Efficient</h3>
-                    <p class="text-gray-600">
-                        Lightning-fast performance with optimized code and best practices.
-                    </p>
-                </div>
-                
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                    <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-3xl">📱</span>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Fully Responsive</h3>
-                    <p class="text-gray-600">
-                        Looks perfect on all devices - mobile, tablet, and desktop.
-                    </p>
-                </div>
-                
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                    <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-3xl">🎨</span>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Beautiful Design</h3>
-                    <p class="text-gray-600">
-                        Modern, clean design that users love and engage with.
-                    </p>
-                </div>
-            </div>
-            <!-- 
-                grid grid-cols-1 md:grid-cols-3: Responsive 3-column grid
-                hover:shadow-xl: Enhanced shadow on hover
-                transition-shadow: Smooth shadow transition
-                rounded-xl: Extra rounded corners
-                Feature cards showcase key benefits
-            -->
-        </div>
-    </section>
+<nav class="container mx-auto px-4 py-4">
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-20 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
-                What People Say
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
-                            JD
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-gray-800">John Doe</h4>
-                            <p class="text-sm text-gray-600">CEO, Company</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700">
-                        "This is amazing! The best learning experience I've had. Highly recommended!"
-                    </p>
-                    <div class="mt-4 text-yellow-400">★★★★★</div>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
-                            JS
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-gray-800">Jane Smith</h4>
-                            <p class="text-sm text-gray-600">Designer, Studio</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700">
-                        "Incredible results! The Tailwind utilities made everything so much easier."
-                    </p>
-                    <div class="mt-4 text-yellow-400">★★★★★</div>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
-                            MB
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-gray-800">Mike Brown</h4>
-                            <p class="text-sm text-gray-600">Developer, Tech</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700">
-                        "Perfect for learning! The step-by-step approach really helped me understand."
-                    </p>
-                    <div class="mt-4 text-yellow-400">★★★★★</div>
-                </div>
-            </div>
-            <!-- 
-                rounded-full: Circular avatar
-                flex items-center: Vertical alignment
-                shadow-md: Subtle shadow for depth
-                Testimonials build trust and credibility
-            -->
-        </div>
-    </section>
+<div class="flex justify-between items-center">
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="max-w-2xl mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
-                    Get In Touch
-                </h2>
-                <form class="space-y-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-gray-700 font-medium mb-2">First Name</label>
-                            <input 
-                                type="text" 
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                placeholder="John"
-                            >
-                        </div>
-                        <div>
-                            <label class="block text-gray-700 font-medium mb-2">Last Name</label>
-                            <input 
-                                type="text" 
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                placeholder="Doe"
-                            >
-                        </div>
-                    </div>
-                    <div>
-                        <label class="block text-gray-700 font-medium mb-2">Email</label>
-                        <input 
-                            type="email" 
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                            placeholder="email@example.com"
-                        >
-                    </div>
-                    <div>
-                        <label class="block text-gray-700 font-medium mb-2">Message</label>
-                        <textarea 
-                            rows="5"
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-                            placeholder="Your message here..."
-                        ></textarea>
-                    </div>
-                    <button 
-                        type="submit"
-                        class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold shadow-lg hover:shadow-xl"
-                    >
-                        Send Message
-                    </button>
-                </form>
-                <!-- 
-                    max-w-2xl: Maximum width for form
-                    grid grid-cols-1 md:grid-cols-2: Responsive 2-column layout
-                    Contact forms enable user communication
-                -->
-            </div>
-        </div>
-    </section>
+<div class="text-2xl font-bold text-blue-600">YourBrand</div>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">YourBrand</h3>
-                    <p class="text-gray-400">
-                        Building amazing websites with Tailwind CSS.
-                    </p>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white transition-colors">Home</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">About</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Services</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Resources</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white transition-colors">Documentation</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Tutorials</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Connect</h4>
-                    <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">f</a>
-                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">t</a>
-                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">in</a>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
-                <p>&copy; 2024 YourBrand. All rights reserved.</p>
-            </div>
-            <!-- 
-                grid grid-cols-1 md:grid-cols-4: Responsive footer columns
-                hover:text-white: Hover color change
-                border-t: Top border separator
-                Footer provides navigation and legal information
-            -->
-        </div>
-    </footer>
+<div class="hidden md:flex items-center gap-6">
 
-    <!-- Floating Action Button -->
-    <button class="fixed bottom-8 right-8 bg-blue-600 text-white w-14 h-14 rounded-full shadow-lg hover:bg-blue-700 transition-colors z-50 flex items-center justify-center text-2xl">
-        ↑
-    </button>
-    <!-- 
-        Floating button for scroll-to-top or primary action
-        fixed bottom-8 right-8: Fixed position
-        rounded-full: Circular button
-        z-50: High z-index
-    -->
+<a href="#home" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">Home</a>
 
-    <!-- Navigation -->
-    <div class="container mx-auto px-4 py-8">
-        <div class="bg-white rounded-lg shadow-md p-6 text-center">
-            <h3 class="text-2xl font-bold text-gray-800 mb-4">Congratulations! 🎉</h3>
-            <p class="text-gray-600 mb-6">
-                You've completed all 10 levels of Tailwind CSS! You now have the skills to build beautiful, responsive websites.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="../level1/one.html" class="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
-                    Review Level 1
-                </a>
-                <a href="../level9/nine.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                    Review Level 9
-                </a>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+<a href="#features" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">Features</a>
 
+<a href="#testimonials" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">Testimonials</a>
+
+<a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">Contact</a>
+
+<button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300">
+
+Get Started
+
+</button>
+
+</div>
+
+<button class="md:hidden text-gray-700 text-2xl">☰</button>
+
+</div>
+
+</nav>
+
+</header>
+
+<!-- Hero Section -->
+
+<section id="home" class="bg-gradient-to-br from-blue-600 to-purple-600 text-white py-20">
+
+<div class="container mx-auto px-4">
+
+<div class="max-w-3xl mx-auto text-center">
+
+<h1 class="text-4xl md:text-6xl font-bold mb-6">
+
+Welcome to Your Future
+
+</h1>
+
+<p class="text-xl md:text-2xl mb-8 text-blue-100">
+
+Build amazing websites with Tailwind CSS. Learn, practice, and master modern web development.
+
+</p>
+
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+
+<button class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-100 transition-colors duration-300">
+
+Get Started
+
+</button>
+
+<button class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-300">
+
+Learn More
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Features Section -->
+
+<section id="features" class="py-20 bg-white">
+
+<div class="container mx-auto px-4">
+
+<h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
+
+Amazing Features
+
+</h2>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+<div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+
+<div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+
+<span class="text-3xl text-blue-600">🚀</span>
+
+</div>
+
+<h3 class="text-2xl font-bold text-gray-800 mb-4">Fast & Efficient</h3>
+
+<p class="text-gray-600">
+
+Lightning
