@@ -1,258 +1,99 @@
-<!DOCTYPE html>
+Copy<!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Level 3: Grid Layouts</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.8">
+
+    <title>Level 3: Grid Layouts</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
+
 <body class="bg-gray-100 min-h-screen">
-    <div class="container mx-auto p-8">
-        <h1 class="text-4xl font-bold text-gray-800 mb-6">
-            Level 3: CSS Grid Layouts with Tailwind
-        </h1>
 
-        <!-- 
-            TASK 1: Basic Grid
-            Learn about grid container and columns
-            
-            WHAT TO MODIFY: The <div> tag below (line 26) - the gray container
-            HOW TO IDENTIFY IT: Look for the div with class "bg-gray-200" - it has a light gray background
-                                It contains three colored divs (blue, green, purple) labeled "Column 1", "Column 2", "Column 3"
-                                Currently has classes: bg-gray-200, p-4, rounded
-            WHY THIS TAG: This div needs to become a grid container. Without grid, the three column divs stack vertically.
-                          Adding grid and grid-cols-3 will arrange them in 3 equal columns side by side. Grid is perfect
-                          for creating structured layouts like card galleries, form sections, and dashboard layouts.
-            
-            Instructions:
-            1. Add "grid" class to create a grid container
-            2. Add "grid-cols-3" to create 3 equal columns
-            3. Add "gap-4" for spacing between grid items
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 1: Create a 3-Column Grid</h2>
-            <!-- TASK 1: Modify this <div> tag - Look for bg-gray-200 with three "Column" divs -->
-            <div class="bg-gray-200 p-4 rounded">
-                <!-- Add grid, grid-cols-3, and gap-4 classes here -->
-                <div class="bg-blue-500 text-white p-6 rounded text-center">Column 1</div>
-                <div class="bg-green-500 text-white p-6 rounded text-center">Column 2</div>
-                <div class="bg-purple-500 text-white p-6 rounded text-center">Column 3</div>
-                <!-- 
-                    grid: Display grid container
-                    grid-cols-3: Create 3 equal columns
-                    gap-4: Gap between grid items (1rem / 16px)
-                -->
-            </div>
-        </div>
+    <div class="container mx-auto p-8">
 
-        <!-- 
-            TASK 2: Grid Column Span
-            Learn to make items span multiple columns
-            
-            WHAT TO MODIFY: The first <div> tag below (line 51) - the red div that says "Spans 2 columns"
-            HOW TO IDENTIFY IT: Look for the div with class "bg-red-500" inside the gray grid container. It contains 
-                                the text "Spans 2 columns". Currently has classes: bg-red-500, text-white, p-6, rounded, 
-                                text-center, col-span-2
-            WHY THIS TAG: This div demonstrates column spanning. The col-span-2 class makes it span 2 out of 3 columns,
-                          creating a wider element. This is useful for hero sections, featured content, or creating 
-                          asymmetric layouts. Column spanning is a key feature of CSS Grid that Flexbox doesn't have.
-            
-            Instructions:
-            1. Add "col-span-2" to the first item to make it span 2 columns
-            2. Try "col-span-3" to span all columns
-            3. Experiment with different spans
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 2: Column Spanning</h2>
-            <div class="bg-gray-200 p-4 rounded grid grid-cols-3 gap-4">
-                <!-- TASK 2: Modify this <div> tag - Look for bg-red-500 with "Spans 2 columns" text -->
-                <div class="bg-red-500 text-white p-6 rounded text-center col-span-2">Spans 2 columns</div>
-                <div class="bg-yellow-500 text-white p-6 rounded text-center">Column 3</div>
-                <div class="bg-orange-500 text-white p-6 rounded text-center">Column 4</div>
-                <div class="bg-pink-500 text-white p-6 rounded text-center">Column 5</div>
-                <!-- 
-                    col-span-2: Item spans 2 columns
-                    col-span-3: Item spans 3 columns
-                    col-span-full: Item spans all columns
-                -->
-            </div>
-        </div>
+        <h1 class="text-4xl font-bold text-gray-800 mb-6">
 
-        <!-- 
-            TASK 3: Grid Rows
-            Learn to control grid rows
-            
-            WHAT TO MODIFY: The first <div> tag below (line 75) - the teal div that says "Spans 2 rows"
-            HOW TO IDENTIFY IT: Look for the div with class "bg-teal-500" inside the gray grid container. It contains 
-                                the text "Spans 2 rows". Currently has classes: bg-teal-500, text-white, p-6, rounded, 
-                                text-center, row-span-2
-            WHY THIS TAG: This div demonstrates row spanning. The row-span-2 class makes it span 2 rows vertically,
-                          creating a taller element. Combined with column spanning, this allows creating complex layouts
-                          like magazine-style layouts where some items are larger than others. Row spanning is essential
-                          for dashboard widgets and card layouts with varying sizes.
-            
-            Instructions:
-            1. Add "grid-rows-2" to create 2 rows
-            2. Add "row-span-2" to make an item span 2 rows
-            3. Try different row configurations
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 3: Row Spanning</h2>
-            <div class="bg-gray-200 p-4 rounded grid grid-cols-3 grid-rows-2 gap-4">
-                <!-- TASK 3: Modify this <div> tag - Look for bg-teal-500 with "Spans 2 rows" text -->
-                <div class="bg-teal-500 text-white p-6 rounded text-center row-span-2">Spans 2 rows</div>
-                <div class="bg-pink-500 text-white p-6 rounded text-center">Item 2</div>
-                <div class="bg-indigo-500 text-white p-6 rounded text-center">Item 3</div>
-                <div class="bg-cyan-500 text-white p-6 rounded text-center">Item 4</div>
-                <div class="bg-emerald-500 text-white p-6 rounded text-center">Item 5</div>
-                <!-- 
-                    grid-rows-2: Create 2 rows
-                    row-span-2: Item spans 2 rows
-                    row-span-3: Item spans 3 rows
-                -->
-            </div>
-        </div>
+            Level 3: CSS Grid Layouts with Tailwind
 
-        <!-- 
-            TASK 4: Responsive Grid Columns
-            Learn responsive grid columns
-            
-            WHAT TO MODIFY: The <div> tag below (line 101) - the gray grid container
-            HOW TO IDENTIFY IT: Look for the div with class "bg-gray-200" that contains six colored divs (rose, amber, 
-                                lime, sky, fuchsia, violet). Currently has classes: bg-gray-200, p-4, rounded, grid, 
-                                grid-cols-1, md:grid-cols-2, lg:grid-cols-3, gap-4
-            WHY THIS TAG: This div demonstrates responsive grid columns. The grid adapts to screen size: 1 column on mobile,
-                          2 columns on tablets (md breakpoint ≥768px), and 3 columns on desktops (lg breakpoint ≥1024px).
-                          This is essential for creating layouts that work on all devices. Responsive grids are the foundation
-                          of modern web design.
-            
-            Instructions:
-            1. Use responsive prefixes:
-               - grid-cols-1 (mobile default)
-               - md:grid-cols-2 (2 columns on medium screens)
-               - lg:grid-cols-3 (3 columns on large screens)
-            2. Apply these classes to create a responsive grid
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 4: Responsive Grid</h2>
-            <!-- TASK 4: Modify this <div> tag - Look for bg-gray-200 with six colored items -->
-            <div class="bg-gray-200 p-4 rounded grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div class="bg-rose-500 text-white p-6 rounded text-center">Item 1</div>
-                <div class="bg-amber-500 text-white p-6 rounded text-center">Item 2</div>
-                <div class="bg-lime-500 text-white p-6 rounded text-center">Item 3</div>
-                <div class="bg-sky-500 text-white p-6 rounded text-center">Item 4</div>
-                <div class="bg-fuchsia-500 text-white p-6 rounded text-center">Item 5</div>
-                <div class="bg-violet-500 text-white p-6 rounded text-center">Item 6</div>
-                <!-- 
-                    grid-cols-1: 1 column on mobile (default)
-                    md:grid-cols-2: 2 columns on screens ≥768px
-                    lg:grid-cols-3: 3 columns on screens ≥1024px
-                    Tailwind breakpoints: sm (640px), md (768px), lg (1024px), xl (1280px)
-                -->
-            </div>
-        </div>
+        </h1>
 
-        <!-- 
-            TASK 5: Grid Gap
-            Learn to control spacing in grids
-            
-            WHAT TO MODIFY: The <div> tag below (line 131) - the gray grid container
-            HOW TO IDENTIFY IT: Look for the div with class "bg-gray-200" that contains six colored divs arranged in a grid.
-                                Currently has classes: bg-gray-200, p-4, rounded, grid, grid-cols-3, gap-6
-            WHY THIS TAG: This div demonstrates grid gap spacing. The gap-6 class adds 1.5rem (24px) of space between all
-                          grid items both horizontally and vertically. Gap is different from margin because it only applies
-                          between items, not around the container. Controlling gap is essential for consistent spacing in
-                          card layouts and galleries.
-            
-            Instructions:
-            1. Try different gap sizes:
-               - gap-2 (0.5rem / 8px)
-               - gap-4 (1rem / 16px)
-               - gap-6 (1.5rem / 24px)
-               - gap-8 (2rem / 32px)
-            2. Use gap-x for horizontal gap, gap-y for vertical gap
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 5: Grid Gaps</h2>
-            <!-- TASK 5: Modify this <div> tag - Look for bg-gray-200 with grid-cols-3 -->
-            <div class="bg-gray-200 p-4 rounded grid grid-cols-3 gap-6">
-                <div class="bg-cyan-500 text-white p-6 rounded text-center">Item 1</div>
-                <div class="bg-emerald-500 text-white p-6 rounded text-center">Item 2</div>
-                <div class="bg-violet-500 text-white p-6 rounded text-center">Item 3</div>
-                <div class="bg-orange-500 text-white p-6 rounded text-center">Item 4</div>
-                <div class="bg-pink-500 text-white p-6 rounded text-center">Item 5</div>
-                <div class="bg-blue-500 text-white p-6 rounded text-center">Item 6</div>
-                <!-- 
-                    gap-2: Gap of 0.5rem (8px) on all sides
-                    gap-4: Gap of 1rem (16px)
-                    gap-x-4: Horizontal gap only
-                    gap-y-6: Vertical gap only
-                -->
-            </div>
-        </div>
+        <!-- TASK 1: Basic Grid -->
 
-        <!-- 
-            TASK 6: Create a Card Grid Layout
-            Build a responsive card gallery using grid
-            
-            WHAT TO MODIFY: The <div> tag below (line 165) - the grid container for cards
-            HOW TO IDENTIFY IT: Look for the div that contains four card divs, each with "Card 1", "Card 2", etc.
-                                Currently has classes: grid, grid-cols-1, md:grid-cols-2, lg:grid-cols-4, gap-6
-            WHY THIS TAG: This div is the grid container for a card gallery. It uses responsive columns: 1 on mobile,
-                          2 on tablets, and 4 on desktop. The gap-6 provides spacing between cards. This is a common pattern
-                          for product listings, blog posts, and feature showcases. Each child card div also needs proper
-                          styling (bg-white, rounded-lg, p-6, shadow-md) to look like a card.
-            
-            Instructions:
-            1. Create a grid with:
-               - grid-cols-1 (mobile)
-               - md:grid-cols-2 (tablet)
-               - lg:grid-cols-4 (desktop)
-               - gap-6
-            2. Each card should have:
-               - bg-white
-               - rounded-lg
-               - p-6
-               - shadow-md (box shadow)
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 6: Create a Card Gallery</h2>
-            <!-- TASK 6: Modify this <div> tag - Look for grid container with four "Card" divs -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white rounded-lg p-6 shadow-md">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Card 1</h3>
-                    <p class="text-gray-600">This is a card in the grid.</p>
-                </div>
-                <div class="bg-white rounded-lg p-6 shadow-md">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Card 2</h3>
-                    <p class="text-gray-600">This is a card in the grid.</p>
-                </div>
-                <div class="bg-white rounded-lg p-6 shadow-md">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Card 3</h3>
-                    <p class="text-gray-600">This is a card in the grid.</p>
-                </div>
-                <div class="bg-white rounded-lg p-6 shadow-md">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Card 4</h3>
-                    <p class="text-gray-600">This is a card in the grid.</p>
-                </div>
-                <!-- 
-                    shadow-md: Medium box shadow (0 4px 6px rgba(0,0,0,0.1))
-                    shadow-lg: Large box shadow
-                    shadow-xl: Extra large box shadow
-                -->
-            </div>
-        </div>
+        <div class="bg-white p-6 rounded-lg mb-6">
 
-        <!-- Navigation -->
-        <div class="mt-8 flex justify-between">
-            <a href="../level2/two.html" class="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
-                ← Previous Level
-            </a>
-            <a href="../level4/four.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                Next Level: Components →
-            </a>
-        </div>
-    </div>
-</body>
-</html>
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 1: Create a 3-column grid</h2>
 
+            <!-- TASK 1: Modify this <div> tag - Look for bg-gray-200 with three colored divs -->
+
+            <div class="bg-gray-200 p-4 rounded grid grid-cols-3 gap-4">
+
+                <div class="bg-blue-500 text-white p-6 rounded text-center">Column 1</div>
+
+                <div class="bg-green-500 text-white p-6 rounded text-center">Column 2</div>
+
+                <div class="bg-purple-500 text-white p-6 rounded text-center">Column 3</div>
+
+            </div>
+
+        </div>
+
+        <!-- TASK 2: Grid Column Span -->
+
+        <div class="bg-white p-6 rounded-lg mb-6">
+
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 2: Column Span</h2>
+
+            <!-- TASK 2: Modify this <div> tag - Look for bg-red-500 with "Spans 2 columns" -->
+
+            <div class="bg-gray-200 p-4 rounded grid grid-cols-3 gap-4">
+
+                <div class="bg-red-500 text-white p-6 rounded text-center col-span-2">Spans 2 columns</div>
+
+                <div class="bg-yellow-500 text-white p-6 rounded text-center">Column 2</div>
+
+                <div class="bg-orange-500 text-white p-6 rounded text-center">Column 3</div>
+
+                <div class="bg-pink-500 text-white p-6 rounded text-center">Column 4</div>
+
+            </div>
+
+        </div>
+
+        <!-- TASK 3: Grid Rows -->
+
+        <div class="bg-white p-6 rounded-lg mb-6">
+
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 3: Row Spanning</h2>
+
+            <!-- TASK 3: Modify this <div> tag - Look for bg-teal-500 with "Spans 2 rows" -->
+
+            <div class="bg-gray-200 p-4 rounded grid grid-cols-3 grid-rows-2 gap-4">
+
+                <div class="bg-teal-500 text-white p-6 rounded text-center row-span-2">Spans 2 rows</div>
+
+                <div class="bg-pink-500 text-white p-6 rounded text-center">Item 2</div>
+
+                <div class="bg-indigo-500 text-white p-6 rounded text-center">Item 3</div>
+
+                <div class="bg-purple-500 text-white p-6 rounded text-center">Item 4</div>
+
+                <div class="bg-blue-500 text-white p-6 rounded text-center">Item 5</div>
+
+            </div>
+
+        </div>
+
+        <!-- TASK 4: Responsive Grid Columns -->
+
+        <div class="bg-white p-6 rounded-lg mb-6">
+
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 4: Responsive Grid Columns</h2>
+
+            <!-- TASK 4: Modify this <div> tag - Look for bg-gray-
