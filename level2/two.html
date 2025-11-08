@@ -1,249 +1,102 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Level 2: Flexbox Layouts</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.6">
+
+    <title>Level 2: Flexbox Layouts</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
+
 <body class="bg-gray-100 min-h-screen">
-    <div class="container mx-auto p-8">
-        <h1 class="text-4xl font-bold text-gray-800 mb-6">
-            Level 2: Flexbox Layouts with Tailwind
-        </h1>
 
-        <!-- 
-            TASK 1: Basic Flex Container
-            Learn about flex, direction, and alignment
-            
-            WHAT TO MODIFY: The <div> tag below (line 27) - the gray container
-            HOW TO IDENTIFY IT: Look for the div with class "bg-gray-200" - it has a light gray background
-                                It contains three colored divs (blue, green, purple) inside it
-                                Currently has classes: bg-gray-200, p-4, rounded
-            WHY THIS TAG: This div is the parent container that needs to become a flex container. 
-                          The three colored divs inside are the flex items that need to be arranged horizontally.
-                          Without flex, these items would stack vertically (block behavior). Adding flex 
-                          will arrange them side by side.
-            
-            Instructions:
-            1. Add "flex" class to make this a flex container
-            2. Add "flex-row" to arrange items horizontally (default)
-            3. Add "gap-4" to add space between items
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 1: Create a Flex Row</h2>
-            <!-- TASK 1: Modify this <div> tag - Look for bg-gray-200 class -->
-            <div class="bg-gray-200 p-4 rounded">
-                <!-- Add flex, flex-row, and gap-4 classes here -->
-                <div class="bg-blue-500 text-white p-4 rounded">Item 1</div>
-                <div class="bg-green-500 text-white p-4 rounded">Item 2</div>
-                <div class="bg-purple-500 text-white p-4 rounded">Item 3</div>
-                <!-- 
-                    flex: Display flex container
-                    flex-row: Items arranged horizontally (left to right)
-                    gap-4: Space between flex items (1rem / 16px)
-                -->
-            </div>
-        </div>
+    <div class="container mx-auto p-8">
 
-        <!-- 
-            TASK 2: Flex Direction
-            Learn to change flex direction
-            
-            WHAT TO MODIFY: The <div> tag below (line 50) - the gray container with height
-            HOW TO IDENTIFY IT: Look for the div with class "bg-gray-200" and "h-64" - it has a light gray background
-                                and a fixed height. It contains three colored divs (red, yellow, orange) inside.
-                                Currently has classes: bg-gray-200, p-4, rounded, h-64, flex, flex-col, items-center, justify-center, gap-4
-            WHY THIS TAG: This div is already a flex container, but you need to understand how flex-col works.
-                          When using flex-col, the main axis becomes vertical, so justify-center centers vertically
-                          and items-center centers horizontally (cross-axis). The h-64 gives it height so you can see
-                          the vertical centering effect.
-            
-            Instructions:
-            1. Change "flex-row" to "flex-col" to stack items vertically
-            2. Add "items-center" to center items horizontally
-            3. Add "justify-center" to center items vertically
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 2: Flex Column</h2>
-            <!-- TASK 2: Modify this <div> tag - Look for bg-gray-200 and h-64 classes -->
-            <div class="bg-gray-200 p-4 rounded h-64 flex flex-col items-center justify-center gap-4">
-                <div class="bg-red-500 text-white p-4 rounded">Item 1</div>
-                <div class="bg-yellow-500 text-white p-4 rounded">Item 2</div>
-                <div class="bg-orange-500 text-white p-4 rounded">Item 3</div>
-                <!-- 
-                    flex-col: Items arranged vertically (top to bottom)
-                    items-center: Align items to center on cross axis (horizontal centering when flex-col)
-                    justify-center: Align items to center on main axis (vertical centering when flex-col)
-                    h-64: Height of 16rem (256px)
-                -->
-            </div>
-        </div>
+        <h1 class="text-4xl font-bold text-gray-800 mb-6">
 
-        <!-- 
-            TASK 3: Justify Content
-            Learn to distribute space along main axis
-            
-            WHAT TO MODIFY: The <div> tag below (line 79) - the gray flex container
-            HOW TO IDENTIFY IT: Look for the div with class "bg-gray-200" that contains three divs labeled 
-                                "Left", "Center", and "Right". Currently has classes: bg-gray-200, p-4, rounded, flex, flex-row, justify-between
-            WHY THIS TAG: This div demonstrates justify-content which controls how items are distributed along 
-                          the main axis (horizontal when flex-row). The justify-between class spaces items with 
-                          first at start, last at end, and equal space between. This is commonly used for navigation 
-                          bars where you want logo on left and links on right.
-            
-            Instructions:
-            1. Try different justify classes:
-               - justify-start (default)
-               - justify-end
-               - justify-center
-               - justify-between (space between items)
-               - justify-around (space around items)
-               - justify-evenly (equal space)
-            2. Change to "justify-between" to see space distribution
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 3: Justify Content</h2>
-            <!-- TASK 3: Modify this <div> tag - Look for bg-gray-200 with "Left", "Center", "Right" items -->
-            <div class="bg-gray-200 p-4 rounded flex flex-row justify-between">
-                <div class="bg-teal-500 text-white p-4 rounded">Left</div>
-                <div class="bg-pink-500 text-white p-4 rounded">Center</div>
-                <div class="bg-indigo-500 text-white p-4 rounded">Right</div>
-                <!-- 
-                    justify-start: Items aligned to start of container
-                    justify-end: Items aligned to end of container
-                    justify-center: Items centered
-                    justify-between: Space between items, first at start, last at end
-                    justify-around: Equal space around each item
-                    justify-evenly: Equal space between all items
-                -->
-            </div>
-        </div>
+            Level 2: Flexbox Layouts with Tailwind
 
-        <!-- 
-            TASK 4: Align Items
-            Learn to align items on cross axis
-            
-            WHAT TO MODIFY: The <div> tag below (line 105) - the gray flex container with inline style
-            HOW TO IDENTIFY IT: Look for the div with class "bg-gray-200" that has style="height: 150px;"
-                                It contains three colored divs (cyan, emerald, violet). Currently has classes: 
-                                bg-gray-200, p-4, rounded, flex, flex-row, items-center, gap-4
-            WHY THIS TAG: This div demonstrates align-items which controls alignment on the cross-axis (perpendicular 
-                          to main axis). When flex-row is used, the cross-axis is vertical, so items-center centers 
-                          items vertically. The fixed height (150px) is needed to see the vertical alignment effect.
-                          This is essential for vertically centering content in headers and navigation bars.
-            
-            Instructions:
-            1. Add "items-center" to center items vertically
-            2. Try "items-start" and "items-end"
-            3. Add "items-stretch" to make items fill container height
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 4: Align Items</h2>
-            <!-- TASK 4: Modify this <div> tag - Look for bg-gray-200 with style="height: 150px;" -->
-            <div class="bg-gray-200 p-4 rounded flex flex-row items-center gap-4" style="height: 150px;">
-                <div class="bg-cyan-500 text-white p-4 rounded">Item 1</div>
-                <div class="bg-emerald-500 text-white p-4 rounded">Item 2</div>
-                <div class="bg-violet-500 text-white p-4 rounded">Item 3</div>
-                <!-- 
-                    items-start: Align items to start of cross axis (top when flex-row)
-                    items-center: Center items on cross axis
-                    items-end: Align items to end of cross axis (bottom when flex-row)
-                    items-stretch: Stretch items to fill cross axis
-                -->
-            </div>
-        </div>
+        </h1>
 
-        <!-- 
-            TASK 5: Flex Wrap
-            Learn to make flex items wrap
-            
-            WHAT TO MODIFY: The <div> tag below (line 129) - the gray flex container
-            HOW TO IDENTIFY IT: Look for the div with class "bg-gray-200" that contains five colored divs 
-                                (rose, amber, lime, sky, fuchsia) each with class "w-32". Currently has classes: 
-                                bg-gray-200, p-4, rounded, flex, flex-wrap, gap-4
-            WHY THIS TAG: This div demonstrates flex-wrap. The child items have fixed width (w-32 = 128px), 
-                          so when the container is too narrow, they wrap to the next line. Without flex-wrap, 
-                          items would shrink to fit. With flex-wrap, items maintain their size and wrap, which 
-                          is essential for responsive card layouts and galleries.
-            
-            Instructions:
-            1. Add "flex-wrap" to allow items to wrap to next line
-            2. Try "flex-nowrap" (default) and "flex-wrap-reverse"
-            3. Add "gap-4" for spacing
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 5: Flex Wrap</h2>
-            <!-- TASK 5: Modify this <div> tag - Look for bg-gray-200 with five w-32 items -->
-            <div class="bg-gray-200 p-4 rounded flex flex-wrap gap-4">
-                <div class="bg-rose-500 text-white p-4 rounded w-32">Item 1</div>
-                <div class="bg-amber-500 text-white p-4 rounded w-32">Item 2</div>
-                <div class="bg-lime-500 text-white p-4 rounded w-32">Item 3</div>
-                <div class="bg-sky-500 text-white p-4 rounded w-32">Item 4</div>
-                <div class="bg-fuchsia-500 text-white p-4 rounded w-32">Item 5</div>
-                <!-- 
-                    flex-wrap: Allow items to wrap to next line
-                    flex-nowrap: Prevent wrapping (default)
-                    flex-wrap-reverse: Wrap items in reverse order
-                    w-32: Width of 8rem (128px)
-                -->
-            </div>
-        </div>
+        <!-- TASK 1: Basic Flex Container -->
 
-        <!-- 
-            TASK 6: Create a Navigation Bar
-            Combine all flexbox concepts to create a navbar
-            
-            WHAT TO MODIFY: The <div> tag below (line 163) - the inner div inside bg-gray-800
-            HOW TO IDENTIFY IT: Look for the div with class "bg-gray-800" (dark background), then find the inner div
-                                that contains "Logo" text and navigation links (Home, About, Contact). 
-                                Currently has classes: flex, justify-between, items-center, p-4
-            WHY THIS TAG: This div is the main navbar container. It uses flex to create a horizontal layout, 
-                          justify-between to push logo to left and nav links to right, and items-center to vertically 
-                          center everything. This is the standard pattern for navigation bars. The nested div for links 
-                          also uses flex with gap-6 to space the links horizontally.
-            
-            Instructions:
-            1. Create a flex container with:
-               - flex
-               - justify-between (space between logo and links)
-               - items-center (vertical centering)
-               - p-4 (padding)
-            2. Add a logo div with text
-            3. Add a nav links container with:
-               - flex
-               - gap-6 (space between links)
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 6: Create a Navigation Bar</h2>
-            <div class="bg-gray-800 rounded-lg">
-                <!-- TASK 6: Modify this <div> tag - Look for div with "Logo" and nav links inside bg-gray-800 -->
-                <div class="flex justify-between items-center p-4">
-                    <div class="text-white text-xl font-bold">Logo</div>
-                    <div class="flex gap-6">
-                        <a href="#" class="text-white hover:text-blue-400">Home</a>
-                        <a href="#" class="text-white hover:text-blue-400">About</a>
-                        <a href="#" class="text-white hover:text-blue-400">Contact</a>
-                    </div>
-                </div>
-                <!-- 
-                    justify-between: Space between logo and navigation links
-                    items-center: Vertically center all items
-                    hover:text-blue-400: Change text color on hover
-                -->
-            </div>
-        </div>
+        <div class="bg-white p-6 rounded-lg mb-6">
 
-        <!-- Navigation -->
-        <div class="mt-8 flex justify-between">
-            <a href="../level1/one.html" class="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
-                ← Previous Level
-            </a>
-            <a href="../level3/three.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                Next Level: Grid Layouts →
-            </a>
-        </div>
-    </div>
-</body>
-</html>
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 1: Basic Flex Container</h2>
 
+            <!-- TASK 1: Modify this <div> tag - Look for bg-gray-200 class -->
+
+            <div class="bg-gray-200 p-4 rounded flex flex-row gap-4">
+
+                <div class="bg-blue-500 text-white p-4 rounded">Item 1</div>
+
+                <div class="bg-green-500 text-white p-4 rounded">Item 2</div>
+
+                <div class="bg-purple-500 text-white p-4 rounded">Item 3</div>
+
+            </div>
+
+        </div>
+
+        <!-- TASK 2: Flex Direction -->
+
+        <div class="bg-white p-6 rounded-lg mb-6">
+
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 2: Flex Column Direction</h2>
+
+            <!-- TASK 2: Modify this <div> tag - Look for bg-gray-200 and h-64 classes -->
+
+            <div class="bg-gray-200 p-4 rounded h-64 flex flex-col items-center justify-center">
+
+                <div class="bg-red-500 text-white p-4 rounded">Item 1</div>
+
+                <div class="bg-yellow-500 text-white p-4 rounded">Item 2</div>
+
+                <div class="bg-orange-500 text-white p-4 rounded">Item 3</div>
+
+            </div>
+
+        </div>
+
+        <!-- TASK 3: Justify Content -->
+
+        <div class="bg-white p-6 rounded-lg mb-6">
+
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 3: Justify Content</h2>
+
+            <!-- TASK 3: Modify this <div> tag - Look for bg-gray-200 with "Left", "Center", and "Right" -->
+
+            <div class="bg-gray-200 p-4 rounded flex flex-row justify-between">
+
+                <div class="bg-teal-500 text-white p-4 rounded">Left</div>
+
+                <div class="bg-pink-500 text-white p-4 rounded">Center</div>
+
+                <div class="bg-indigo-500 text-white p-4 rounded">Right</div>
+
+            </div>
+
+        </div>
+
+        <!-- TASK 4: Align Items -->
+
+        <div class="bg-white p-6 rounded-lg mb-6">
+
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 4: Align Items</h2>
+
+            <!-- TASK 4: Modify this <div> tag - Look for bg-gray-200 with style="height: 100px;" -->
+
+            <div class="bg-gray-200 p-4 rounded flex flex-row items-center gap-4" style="height: 100px;">
+
+                <div class="bg-cyan-500 text-white p-4 rounded">Item 1</div>
+
+                <div class="bg-emerald-500 text-white p-4 rounded">Item 2</div>
+
+                
+                <div class="bg-violet-500>
