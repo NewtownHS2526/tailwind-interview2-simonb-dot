@@ -1,297 +1,218 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Level 4: Components - Buttons & Cards</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Level 4: Components - Buttons & Cards</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
+
 <body class="bg-gray-100 min-h-screen">
-    <div class="container mx-auto p-8">
-        <h1 class="text-4xl font-bold text-gray-800 mb-6">
-            Level 4: Building Components - Buttons & Cards
-        </h1>
 
-        <!-- 
-            TASK 1: Button Styles
-            Learn to create different button styles
-            
-            WHAT TO MODIFY: The <button> tag below (line 32) - the primary button
-            HOW TO IDENTIFY IT: Look for the button element that contains the text "Primary Button"
-                                It's inside a flex container with gap-4. Currently has classes: bg-blue-600, 
-                                text-white, px-6, py-3, rounded-lg, hover:bg-blue-700, transition-colors
-            WHY THIS TAG: This button demonstrates basic button styling. The bg-blue-600 gives it a blue background,
-                          px-6 py-3 provides comfortable padding, rounded-lg softens corners, and hover:bg-blue-700
-                          creates an interactive hover effect. Buttons are the primary interactive elements in forms
-                          and navigation, so proper styling is essential for user experience.
-            
-            Instructions:
-            1. Create a primary button with:
-               - bg-blue-600 (background)
-               - text-white (text color)
-               - px-6 py-3 (padding)
-               - rounded-lg (rounded corners)
-               - hover:bg-blue-700 (hover state)
-            2. Create a secondary button with different colors
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 1: Create Buttons</h2>
-            <div class="flex gap-4">
-                <!-- TASK 1: Modify this <button> tag - Look for button with "Primary Button" text -->
-                <button class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                    Primary Button
-                </button>
-                <!-- 
-                    bg-blue-600: Background color blue, shade 600
-                    px-6: Horizontal padding (left/right) of 1.5rem (24px)
-                    py-3: Vertical padding (top/bottom) of 0.75rem (12px)
-                    hover:bg-blue-700: Darker background on hover
-                    transition-colors: Smooth color transition animation
-                -->
-                
-                <!-- Your secondary button here -->
-                <button class="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
-                    Secondary Button
-                </button>
-            </div>
-        </div>
+<div class="container mx-auto p-8">
 
-        <!-- 
-            TASK 2: Button Variants
-            Create different button sizes and styles
-            
-            WHAT TO MODIFY: The <button> tags below (lines 62, 70, 74, 82) - all button variants
-            HOW TO IDENTIFY IT: Look for the buttons with text "Small Button", "Medium Button", "Large Button", 
-                                and "Outline Button" inside the flex container. They have different sizes and styles.
-            WHY THIS TAG: These buttons demonstrate button variants. Different sizes (small, medium, large) use different
-                          padding (py-2 px-4 vs py-4 px-8) and text sizes (text-sm vs text-lg). The outline button
-                          uses border instead of background, creating a different visual style. Having multiple button
-                          variants allows for visual hierarchy and different use cases (primary actions vs secondary actions).
-            
-            Instructions:
-            1. Create small button: py-2 px-4 text-sm
-            2. Create large button: py-4 px-8 text-lg
-            3. Create outline button: border-2 border-blue-600 text-blue-600 bg-transparent
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 2: Button Sizes & Variants</h2>
-            <div class="flex gap-4 items-center flex-wrap">
-                <!-- TASK 2: Modify these <button> tags - Look for "Small Button", "Medium Button", "Large Button", "Outline Button" -->
-                <button class="bg-green-600 text-white py-2 px-4 text-sm rounded-lg hover:bg-green-700 transition-colors">
-                    Small Button
-                </button>
-                <!-- 
-                    text-sm: Small text size (0.875rem / 14px)
-                    py-2 px-4: Smaller padding for small button
-                -->
-                
-                <button class="bg-green-600 text-white py-3 px-6 rounded-lg hover:bg-green-700 transition-colors">
-                    Medium Button
-                </button>
-                
-                <button class="bg-green-600 text-white py-4 px-8 text-lg rounded-lg hover:bg-green-700 transition-colors">
-                    Large Button
-                </button>
-                <!-- 
-                    text-lg: Large text size (1.125rem / 18px)
-                    py-4 px-8: Larger padding for large button
-                -->
-                
-                <button class="border-2 border-blue-600 text-blue-600 bg-transparent py-3 px-6 rounded-lg hover:bg-blue-600 hover:text-white transition-colors">
-                    Outline Button
-                </button>
-                <!-- 
-                    border-2: Border width of 2px
-                    border-blue-600: Border color
-                    bg-transparent: Transparent background
-                    hover:bg-blue-600 hover:text-white: Fill background on hover
-                -->
-            </div>
-        </div>
+    <h1 class="text-4xl font-bold text-gray-800 mb-6">
 
-        <!-- 
-            TASK 3: Basic Card
-            Learn to create a card component
-            
-            WHAT TO MODIFY: The inner <div> tag below (line 110) - the card container
-            HOW TO IDENTIFY IT: Look for the div with class "bg-white" that contains "Card Title" heading and a paragraph.
-                                It's inside a flex justify-center container. Currently has classes: bg-white, rounded-lg, 
-                                p-6, shadow-md, max-w-md
-            WHY THIS TAG: This div is the card component. Cards are containers that group related content. The bg-white
-                          provides contrast, rounded-lg softens edges, shadow-md adds depth, and max-w-md limits width
-                          for readability. Cards are fundamental UI components used for product listings, blog posts,
-                          feature showcases, and dashboard widgets.
-            
-            Instructions:
-            1. Create a card with:
-               - bg-white (background)
-               - rounded-lg (rounded corners)
-               - p-6 (padding)
-               - shadow-md (shadow)
-               - max-w-md (max width)
-            2. Add a heading and paragraph inside
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 3: Create a Card</h2>
-            <div class="flex justify-center">
-                <!-- TASK 3: Modify this <div> tag - Look for div with "Card Title" inside -->
-                <div class="bg-white rounded-lg p-6 shadow-md max-w-md">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Card Title</h3>
-                    <p class="text-gray-600">
-                        This is a basic card component. Cards are great for displaying content in a contained format.
-                    </p>
-                </div>
-                <!-- 
-                    max-w-md: Maximum width of 28rem (448px)
-                    shadow-md: Medium drop shadow
-                    Cards typically have: background, padding, rounded corners, and shadow
-                -->
-            </div>
-        </div>
+        Level 4: Building Components - Buttons & Cards
 
-        <!-- 
-            TASK 4: Card with Image
-            Create a card with an image header
-            
-            WHAT TO MODIFY: The inner <div> tags below (lines 139, 140) - the card container and image div
-            HOW TO IDENTIFY IT: Look for the div with class "bg-white" that contains a gradient div (purple to pink)
-                                and "Card with Image" heading. The gradient div acts as the image placeholder.
-                                Card has classes: bg-white, rounded-lg, shadow-md, max-w-md, overflow-hidden
-                                Image div has classes: w-full, h-48, bg-gradient-to-r, from-purple-400, to-pink-400, rounded-t-lg
-            WHY THIS TAG: The card container uses overflow-hidden to clip the image to rounded corners. The image div
-                          uses w-full h-48 for dimensions, rounded-t-lg to round only top corners (matching card top),
-                          and bg-gradient-to-r for a gradient placeholder. Cards with images are common in product listings,
-                          blog previews, and feature cards.
-            
-            Instructions:
-            1. Add an image section at the top:
-               - w-full (full width)
-               - h-48 (height)
-               - object-cover (image fit)
-               - rounded-t-lg (rounded top corners)
-            2. Structure: image → content
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 4: Card with Image</h2>
-            <div class="flex justify-center">
-                <!-- TASK 4: Modify these <div> tags - Look for card with gradient image and "Card with Image" text -->
-                <div class="bg-white rounded-lg shadow-md max-w-md overflow-hidden">
-                    <div class="w-full h-48 bg-gradient-to-r from-purple-400 to-pink-400 rounded-t-lg"></div>
-                    <!-- 
-                        bg-gradient-to-r: Gradient from left to right
-                        from-purple-400: Start color purple
-                        to-pink-400: End color pink
-                        overflow-hidden: Hide overflow (for rounded corners)
-                    -->
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Card with Image</h3>
-                        <p class="text-gray-600">
-                            This card has an image header. The image uses a gradient background as a placeholder.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    </h1>
 
-        <!-- 
-            TASK 5: Card with Button
-            Add interactive elements to cards
-            
-            WHAT TO MODIFY: The <button> tag below (line 174) - the action button inside the card
-            HOW TO IDENTIFY IT: Look for the button with text "Add to Cart" inside the card that contains "Product Card" heading.
-                                It's at the bottom of the card. Currently has classes: bg-indigo-600, text-white, px-6, py-2,
-                                rounded-lg, hover:bg-indigo-700, transition-colors, w-full
-            WHY THIS TAG: This button demonstrates call-to-action (CTA) buttons in cards. The w-full class makes it span
-                          the full width of the card, creating a prominent action. Cards with buttons are essential for
-                          e-commerce product cards, service cards, and feature cards where users need to take action.
-                          The button styling matches the card's design language.
-            
-            Instructions:
-            1. Add a button at the bottom of the card
-            2. Use flex and justify-between to space title and button
-            3. Add hover effects to the button
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 5: Card with Action Button</h2>
-            <div class="flex justify-center">
-                <div class="bg-white rounded-lg shadow-md max-w-md p-6">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Product Card</h3>
-                    <p class="text-gray-600 mb-4">
-                        This is a product card with a call-to-action button.
-                    </p>
-                    <!-- TASK 5: Modify this <button> tag - Look for button with "Add to Cart" text -->
-                    <button class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition-colors w-full">
-                        Add to Cart
-                    </button>
-                    <!-- 
-                        w-full: Full width button (spans container)
-                        Cards with actions should have clear call-to-action buttons
-                    -->
-                </div>
-            </div>
-        </div>
+    <!-- TASK 1: Button Styles -->
 
-        <!-- 
-            TASK 6: Card Grid
-            Create multiple cards in a grid layout
-            
-            WHAT TO MODIFY: The <div> tag below (line 198) - the grid container for cards
-            HOW TO IDENTIFY IT: Look for the div that contains three card divs, each with "Card 1", "Card 2", "Card 3" headings.
-                                Currently has classes: grid, grid-cols-1, md:grid-cols-3, gap-6
-            WHY THIS TAG: This div is the grid container that arranges multiple cards. It uses responsive columns: 1 on mobile,
-                          3 on tablets/desktop. The gap-6 provides spacing between cards. Combining grid layout with card components
-                          creates professional galleries for products, services, blog posts, and features. Each card maintains
-                          consistent styling while being part of a larger layout system.
-            
-            Instructions:
-            1. Use grid layout from Level 3
-            2. Create 3 cards in a row:
-               - grid grid-cols-1 md:grid-cols-3
-               - gap-6
-            3. Each card should have unique content
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 6: Card Grid Layout</h2>
-            <!-- TASK 6: Modify this <div> tag - Look for grid container with three "Card" divs -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Card 1</h3>
-                    <p class="text-gray-600 mb-4">First card in the grid.</p>
-                    <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors">
-                        Learn More
-                    </button>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Card 2</h3>
-                    <p class="text-gray-600 mb-4">Second card in the grid.</p>
-                    <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors">
-                        Learn More
-                    </button>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Card 3</h3>
-                    <p class="text-gray-600 mb-4">Third card in the grid.</p>
-                    <button class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition-colors">
-                        Learn More
-                    </button>
-                </div>
-                <!-- 
-                    Combining grid layout with card components creates a professional gallery
-                    Each card is independent and can have different content and actions
-                -->
-            </div>
-        </div>
+    <div class="bg-white p-6 rounded-lg mb-6">
 
-        <!-- Navigation -->
-        <div class="mt-8 flex justify-between">
-            <a href="../level3/three.html" class="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
-                ← Previous Level
-            </a>
-            <a href="../level5/five.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                Next Level: Responsive Design →
-            </a>
-        </div>
-    </div>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 1: Create Buttons</h2>
+
+        <div class="flex gap-4">
+
+            <!-- TASK 1: Modify this <button> tag - Look for button with "Primary Button" -->
+
+            <button class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Primary Button</button>
+
+            <button class="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-700">Secondary Button</button>
+
+        </div>
+
+    </div>
+
+    <!-- TASK 2: Button Variants -->
+
+    <div class="bg-white p-6 rounded-lg mb-6">
+
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 2: Button Sizes & Styles</h2>
+
+        <div class="flex gap-4 items-center flex-wrap">
+
+            <!-- TASK 2: Modify these <button> tags - Look for "Small Button", "Medium Button", and "Outline Button" -->
+
+            <button class="bg-green-600 text-white py-2 px-4 text-sm rounded-lg hover:bg-green-700">Small Button</button>
+
+            <button class="bg-green-600 text-white py-3 px-6 rounded-lg hover:bg-green-700">Medium Button</button>
+
+            <button class="bg-green-600 text-white py-4 px-8 text-lg rounded-lg hover:bg-green-700">Large Button</button>
+
+            <button class="border-2 border-blue-600 text-blue-600 bg-transparent hover:bg-blue-600 hover:text-white py-2 px-4 rounded-lg transition-colors">Outline Button</button>
+
+        </div>
+
+    </div>
+
+    <!-- TASK 3: Create a Card -->
+
+    <div class="bg-white p-6 rounded-lg mb-6">
+
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 3: Create a Card</h2>
+
+        <div class="flex justify-center">
+
+            <!-- TASK 3: Modify this <div> tag - Look for div with "Card Title" -->
+
+            <div class="bg-white rounded-lg p-6 shadow-md max-w-md">
+
+                <h3 class="text-2xl font-bold text-gray-800 mb-2">Card Title</h3>
+
+                <p class="text-gray-600">
+
+                    This is a basic card component. Cards are great for displaying information in a structured way.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- TASK 4: Card with Image -->
+
+    <div class="bg-white p-6 rounded-lg mb-6">
+
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 4: Card with Image</h2>
+
+        <div class="flex justify-center">
+
+            <!-- TASK 4: Modify these <div> tags - Look for card with gradient image -->
+
+            <div class="bg-white rounded-lg shadow-md max-w-md overflow-hidden">
+
+                <div class="w-full h-48 bg-gradient-to-r from-purple-400 to-pink-500 rounded-t-lg">
+
+                    <img src="https://source.unsplash.com/random/400x200" alt="Random Image" class="w-full h-full object-cover rounded-t-lg">
+
+                </div>
+
+                <div class="p-6">
+
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Card with Image</h3>
+
+                    <p class="text-gray-600">
+
+                        This card has an image header. The image uses a gradient overlay for a modern look.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- TASK 5: Card with Button -->
+
+    <div class="bg-white p-6 rounded-lg mb-6">
+
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 5: Card with Action</h2>
+
+        <div class="flex justify-center">
+
+            <div class="bg-white rounded-lg shadow-md max-w-md p-6">
+
+                <h3 class="text-2xl font-bold text-gray-800 mb-2">Product Card</h3>
+
+                <p class="text-gray-600 mb-4">
+
+                    This is a product card with a call-to-action button.
+
+                </p>
+
+                <!-- TASK 5: Modify this <button> tag - Look for button with "Add to Cart" -->
+
+                <button class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 w-full transition-colors">
+
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- TASK 6: Card Grid -->
+
+    <div class="bg-white p-6 rounded-lg mb-6">
+
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 6: Card Grid Layout</h2>
+
+        <!-- TASK 6: Modify this <div> tag - Look for grid container with three cards -->
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <div class="bg-white rounded-lg shadow-md p-6">
+
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Card 1</h3>
+
+                <p class="text-gray-600 mb-4">First card in the grid.</p>
+
+                <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Learn More</button>
+
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6">
+
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Card 2</h3>
+
+                <p class="text-gray-600 mb-4">Second card in the grid.</p>
+
+                <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Learn More</button>
+
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6">
+
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Card 3</h3>
+
+                <p class="text-gray-600 mb-4">Third card in the grid.</p>
+
+                <button class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">Learn More</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Navigation -->
+
+    <div class="mt-8 flex justify-between">
+
+        <a href="/level3/three.html" class="bg-gray-600 text-white px-6 py-3 rounded hover:bg-gray-700">Previous Level</a>
+
+        <a href="../level5/five.html" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">Next Level: Responsive Design</a>
+
+    </div>
+
+</div>
+
 </body>
-</html>
-
+    <\html>
