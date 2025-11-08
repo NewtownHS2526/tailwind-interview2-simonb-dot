@@ -1,178 +1,113 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Level 1: Tailwind Basics - Colors, Text & Spacing</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Level 1: Tailwind Basics - Colors, Text & Spacing</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
+
 <body class="bg-gray-100 min-h-screen">
-    <!-- 
-        TASK 1: Colors and Backgrounds
-        Learn about Tailwind's color system and background utilities
-        
-        WHAT TO MODIFY: The <div> tag below (line 30)
-        HOW TO IDENTIFY IT: Look for the div with class "bg-blue-500" - it has a blue background
-        WHY THIS TAG: This div is specifically designed for practicing color changes. 
-                      It contains the text "Change my background color to green!" which tells you this is the right element.
-        
-        Instructions:
-        1. Change the background color from "bg-blue-500" to "bg-green-500"
-        2. Add a text color class "text-white" to make the text white
-        3. Try different color shades: bg-blue-100, bg-blue-300, bg-blue-700, bg-blue-900
-    -->
-    <div class="container mx-auto p-8">
-        <h1 class="text-4xl font-bold text-gray-800 mb-6">
-            Level 1: Tailwind Basics - Colors, Text & Spacing
-        </h1>
-        
-        <!-- TASK 1: Modify this <div> tag - Look for bg-blue-500 class -->
-        <div class="bg-blue-500 p-6 rounded-lg mb-4">
-            <p class="text-lg">Change my background color to green!</p>
-            <!-- 
-                bg-blue-500: Background color blue, shade 500 (medium intensity)
-                p-6: Padding of 1.5rem (24px) on all sides
-                rounded-lg: Border radius of 0.5rem (8px) for rounded corners
-            -->
-        </div>
 
-        <!-- 
-            TASK 2: Text Styling
-            Learn about text size, weight, and color utilities
-            
-            WHAT TO MODIFY: The <p> (paragraph) tag below (line 58)
-            HOW TO IDENTIFY IT: Look for the paragraph that contains the text "Style this text: Make me bigger, bolder, and purple!"
-                                It has classes: text-lg, font-normal, text-gray-700
-            WHY THIS TAG: This paragraph is the target element for text styling practice. 
-                          The text content explicitly asks you to style it, and it currently has 
-                          the base classes (text-lg, font-normal, text-gray-700) that you need to modify.
-            
-            Instructions:
-            1. Change the text size from "text-lg" to "text-2xl"
-            2. Change font weight from "font-normal" to "font-bold"
-            3. Change text color from "text-gray-700" to "text-purple-600"
-        -->
-        <div class="bg-white p-6 rounded-lg mb-4">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Text Styling Challenge</h2>
-            <!-- TASK 2: Modify this <p> tag - Look for text-lg font-normal text-gray-700 classes -->
-            <p class="text-lg font-normal text-gray-700">
-                Style this text: Make me bigger, bolder, and purple!
-            </p>
-            <!-- 
-                text-lg: Font size of 1.125rem (18px)
-                font-normal: Font weight of 400 (normal)
-                text-gray-700: Text color gray, shade 700 (dark gray)
-            -->
-        </div>
+    <div class="container mx-auto p-8">
 
-        <!-- 
-            TASK 3: Spacing
-            Learn about margin and padding utilities
-            
-            WHAT TO MODIFY: The inner <div> tag below (line 88) - the yellow one
-            HOW TO IDENTIFY IT: Look for the div with class "bg-yellow-200" - it has a yellow background color
-                                It also contains the text "Add more spacing to this element!"
-                                Currently has classes: bg-yellow-200, p-4, mb-4
-            WHY THIS TAG: This div is nested inside the white container and is specifically designed 
-                          for spacing practice. It currently has minimal spacing (p-4, mb-4) that you'll expand.
-                          The yellow background makes it visually distinct and easy to identify.
-            
-            Instructions:
-            1. Add margin-top of 8 units using "mt-8"
-            2. Add padding-left of 12 units using "pl-12"
-            3. Change the margin-bottom from "mb-4" to "mb-8"
-        -->
-        <div class="bg-white p-6 rounded-lg mb-4">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Spacing Challenge</h2>
-            <!-- TASK 3: Modify this <div> tag - Look for bg-yellow-200 class -->
-            <div class="bg-yellow-200 p-4 mb-4">
-                <p class="text-gray-800">
-                    Add more spacing to this element!
-                </p>
-                <!-- 
-                    mb-4: Margin bottom of 1rem (16px)
-                    p-4: Padding of 1rem (16px) on all sides
-                    Tailwind spacing scale: 1 = 0.25rem (4px), 4 = 1rem (16px), 8 = 2rem (32px)
-                -->
-            </div>
-        </div>
+        <h1 class="text-4xl font-bold text-gray-800 mb-6">
 
-        <!-- 
-            TASK 4: Borders and Rounded Corners
-            Learn about border and rounded utilities
-            
-            WHAT TO MODIFY: The inner <div> tag below (line 120) - the pink one
-            HOW TO IDENTIFY IT: Look for the div with class "bg-pink-100" - it has a light pink background
-                                It contains the text "Add a border and make me more rounded!"
-                                Currently has classes: bg-pink-100, rounded, p-6
-            WHY THIS TAG: This div is designed specifically for border practice. It currently has 
-                          minimal rounding (just "rounded") and no border, which you'll add.
-                          The pink background makes it easy to spot, and the text content confirms it's the right element.
-            
-            Instructions:
-            1. Add a border using "border-2 border-red-500"
-            2. Make the corners more rounded by changing "rounded" to "rounded-xl"
-            3. Add a border color of your choice
-        -->
-        <div class="bg-white rounded-lg p-6 mb-4">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Border Challenge</h2>
-            <!-- TASK 4: Modify this <div> tag - Look for bg-pink-100 class -->
-            <div class="bg-pink-100 rounded p-6">
-                <p class="text-gray-800">Add a border and make me more rounded!</p>
-                <!-- 
-                    rounded: Border radius of 0.25rem (4px)
-                    rounded-lg: Border radius of 0.5rem (8px)
-                    rounded-xl: Border radius of 0.75rem (12px)
-                    border-2: Border width of 2px
-                    border-red-500: Border color red, shade 500
-                -->
-            </div>
-        </div>
+            Level 1: Tailwind Basics - Colors, Text & Spacing
 
-        <!-- 
-            TASK 5: Combine Everything
-            Create a styled card using all the concepts you've learned
-            
-            WHAT TO MODIFY: The card <div> tag below (line 163) and its child elements
-            HOW TO IDENTIFY IT: Look for the div with class "bg-indigo-500" - it has an indigo/purple background
-                                It contains an <h3> heading "Congratulations!" and a paragraph
-                                Currently has classes: bg-indigo-500, text-white, p-8, rounded-xl, mb-4
-            WHY THIS TAG: This div is your final challenge - a complete card component. It already has 
-                          most of the required classes, so you should verify they're all correct. 
-                          This task combines all previous concepts: colors, text styling, spacing, and borders.
-                          The indigo background makes it visually distinct from other elements.
-            
-            Instructions:
-            Verify/modify the card div below to ensure it has:
-            1. A card div with:
-               - Background color: bg-indigo-500
-               - Text color: text-white
-               - Padding: p-8
-               - Rounded corners: rounded-xl
-               - Margin: mb-4
-            2. A heading (<h3>) with:
-               - Text size: text-3xl
-               - Font weight: font-bold
-            3. A paragraph (<p>) with:
-               - Text size: text-lg
-               - Margin top: mt-4
-        -->
-        <div class="bg-white rounded-lg p-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Final Challenge: Create a Card</h2>
-            <!-- TASK 5: Modify this card <div> tag - Look for bg-indigo-500 class -->
-            <div class="bg-indigo-500 text-white p-8 rounded-xl mb-4">
-                <h3 class="text-3xl font-bold">Congratulations!</h3>
-                <p class="text-lg mt-4">You've completed Level 1. Move to Level 2 to learn about Flexbox layouts!</p>
-            </div>
-        </div>
+        </h1>
 
-        <!-- Navigation -->
-        <div class="mt-8 text-center">
-            <a href="../level2/two.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                Next Level: Flexbox Layouts →
-            </a>
-        </div>
-    </div>
+        <!-- TASK 1: Colors and Backgrounds -->
+
+        <div class="bg-green-500 p-6 rounded-lg mb-4 text-white">
+
+            <p class="text-lg">Change my background color to green!</p>
+
+        </div>
+
+        <!-- TASK 2: Text Styling -->
+
+        <div class="bg-white p-6 rounded-lg mb-4">
+
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Text Styling Challenge</h2>
+
+            <p class="text-2xl font-bold text-purple-600">
+
+                Style this text: Make me bigger, bolder, and purple!
+
+            </p>
+
+        </div>
+
+        <!-- TASK 3: Spacing -->
+
+        <div class="bg-white p-6 rounded-lg mb-4">
+
+             <h2 class="text-2xl font-semibold text-gray-800 mb-4">Spacing Challenge</h2>
+
+             <div class="bg-yellow-200 p-4 mb-8 pl-12">
+
+                <p class="text-gray-800">
+
+                    Add more spacing to this element!
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- TASK 4: Borders and Rounded Corners -->
+
+        <div class="bg-white rounded-lg p-6 mb-4">
+
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Border Challenge</h2>
+
+            <div class="bg-pink-100 rounded-xl p-6 border-2 border-red-500">
+
+                <p class="text-gray-800">Add a border and make me more rounded!</p>
+
+            </div>
+
+        </div>
+
+        <!-- TASK 5: Combine Everything -->
+
+        <div class="bg-white rounded-lg p-6 mb-4">
+
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Final Challenge: Create a Card</h2>
+
+            <div class="bg-indigo-500 text-white p-8 rounded-xl mb-4">
+
+                <h3 class="text-3xl font-bold">Congratulations!</h3>
+
+                <p class="text-lg mt-4">You've completed Level 1. Move to Level 2 to learn about Flexbox Layouts.</p>
+
+            </div>
+
+        </div>
+
+        <!-- Navigation -->
+
+        <div class="mt-8 text-center">
+
+            <a href="../level2/two.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+
+                Next Level: Flexbox Layouts →
+
+            </a>
+
+        </div>
+
+    </div>
+
 </body>
-</html>
 
+</html>
