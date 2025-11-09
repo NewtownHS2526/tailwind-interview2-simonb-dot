@@ -1,349 +1,85 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Level 9: Complex Components</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Level 9: Complex Components</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
+
 <body class="bg-gray-100 min-h-screen">
-    <div class="container mx-auto p-8">
-        <h1 class="text-4xl font-bold text-gray-800 mb-6">
-            Level 9: Building Complex Components
-        </h1>
 
-        <!-- 
-            TASK 1: Modal/Dialog Component
-            Create a modal overlay with backdrop
-            
-            Instructions:
-            1. Create fixed overlay with backdrop-blur
-            2. Center modal with flex and absolute positioning
-            3. Add close button in top-right corner
-            4. Style with shadows and rounded corners
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 1: Modal Component</h2>
-            <button class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                Open Modal
-            </button>
-            
-            <!-- Modal Structure (for reference) -->
-            <div class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm hidden items-center justify-center z-50">
-                <div class="bg-white rounded-xl shadow-2xl max-w-md w-full mx-4 relative">
-                    <button class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl">×</button>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Modal Title</h3>
-                        <p class="text-gray-600 mb-6">This is a modal dialog component with backdrop blur.</p>
-                        <div class="flex gap-4 justify-end">
-                            <button class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">Cancel</button>
-                            <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Confirm</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- 
-                fixed inset-0: Covers entire viewport
-                bg-black bg-opacity-50: Semi-transparent dark overlay
-                backdrop-blur-sm: Blur effect on background
-                items-center justify-center: Center modal
-                z-50: High z-index to appear above all content
-                absolute top-4 right-4: Close button in corner
-                max-w-md: Maximum width for modal
-            -->
-        </div>
+    <div class="container mx-auto p-8">
 
-        <!-- 
-            TASK 2: Dropdown Menu
-            Create a dropdown navigation menu
-            
-            Instructions:
-            1. Use relative positioning for container
-            2. Absolute position dropdown menu
-            3. Add hover state to show/hide
-            4. Style with shadows and rounded corners
-            5. Add arrow indicator
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 2: Dropdown Menu</h2>
-            <div class="relative inline-block">
-                <button class="bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-700 flex items-center gap-2">
-                    Menu
-                    <span>▼</span>
-                </button>
-                <div class="absolute top-full left-0 mt-2 bg-white rounded-lg shadow-lg min-w-48 hidden">
-                    <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-t-lg">Profile</a>
-                    <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-100">Settings</a>
-                    <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-b-lg">Logout</a>
-                </div>
-                <!-- 
-                    relative: Container for absolute positioning
-                    absolute top-full: Position below button
-                    mt-2: Margin top for spacing
-                    min-w-48: Minimum width
-                    hover:bg-gray-100: Hover state for menu items
-                    Dropdowns are common in navigation menus
-                -->
-            </div>
-        </div>
+        <h1 class="text-4xl font-bold text-gray-800 mb-6">
 
-        <!-- 
-            TASK 3: Toast Notification
-            Create a toast notification component
-            
-            Instructions:
-            1. Fixed position at top-right
-            2. Add slide-in animation
-            3. Include icon, message, and close button
-            4. Use different colors for success/error/warning
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 3: Toast Notification</h2>
-            <button class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors">
-                Show Toast
-            </button>
-            
-            <!-- Toast Structure -->
-            <div class="fixed top-4 right-4 bg-white rounded-lg shadow-xl p-4 max-w-sm z-50 border-l-4 border-green-500 hidden">
-                <div class="flex items-start gap-3">
-                    <div class="text-green-500 text-xl">✓</div>
-                    <div class="flex-1">
-                        <h4 class="font-semibold text-gray-800">Success!</h4>
-                        <p class="text-gray-600 text-sm">Your action was completed successfully.</p>
-                    </div>
-                    <button class="text-gray-400 hover:text-gray-600">×</button>
-                </div>
-            </div>
-            <!-- 
-                fixed top-4 right-4: Position at top-right
-                border-l-4 border-green-500: Left border for accent
-                max-w-sm: Maximum width
-                z-50: High z-index
-                flex items-start: Align items to top
-                Toast notifications provide user feedback
-            -->
-        </div>
+            Level 9: Building Complex Components
 
-        <!-- 
-            TASK 4: Tabs Component
-            Create a tabbed interface
-            
-            Instructions:
-            1. Create tab buttons with active state
-            2. Use flex for tab layout
-            3. Show/hide tab content
-            4. Style active tab differently
-            5. Add border-bottom for active indicator
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 4: Tabs Component</h2>
-            <div class="border-b border-gray-200">
-                <div class="flex gap-2">
-                    <button class="px-6 py-3 text-blue-600 font-medium border-b-2 border-blue-600">
-                        Tab 1
-                    </button>
-                    <button class="px-6 py-3 text-gray-600 hover:text-gray-800">
-                        Tab 2
-                    </button>
-                    <button class="px-6 py-3 text-gray-600 hover:text-gray-800">
-                        Tab 3
-                    </button>
-                </div>
-            </div>
-            <div class="mt-4 p-4 bg-gray-50 rounded-lg">
-                <p class="text-gray-700">Content for Tab 1 goes here.</p>
-            </div>
-            <!-- 
-                border-b-2 border-blue-600: Active tab indicator
-                text-blue-600: Active tab color
-                text-gray-600: Inactive tab color
-                hover:text-gray-800: Hover state
-                Tabs organize content into sections
-            -->
-        </div>
+        </h1>
 
-        <!-- 
-            TASK 5: Accordion Component
-            Create a collapsible accordion
-            
-            Instructions:
-            1. Create accordion items with headers
-            2. Add expand/collapse indicator (arrow)
-            3. Style with borders and spacing
-            4. Add hover states
-            5. Show/hide content on click
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 5: Accordion Component</h2>
-            <div class="space-y-2">
-                <div class="border border-gray-200 rounded-lg">
-                    <button class="w-full px-6 py-4 flex justify-between items-center hover:bg-gray-50 rounded-t-lg">
-                        <span class="font-semibold text-gray-800">Accordion Item 1</span>
-                        <span class="text-gray-500">▼</span>
-                    </button>
-                    <div class="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                        <p class="text-gray-700">Content for accordion item 1 goes here.</p>
-                    </div>
-                </div>
-                <div class="border border-gray-200 rounded-lg">
-                    <button class="w-full px-6 py-4 flex justify-between items-center hover:bg-gray-50">
-                        <span class="font-semibold text-gray-800">Accordion Item 2</span>
-                        <span class="text-gray-500">▼</span>
-                    </button>
-                </div>
-                <div class="border border-gray-200 rounded-lg">
-                    <button class="w-full px-6 py-4 flex justify-between items-center hover:bg-gray-50 rounded-b-lg">
-                        <span class="font-semibold text-gray-800">Accordion Item 3</span>
-                        <span class="text-gray-500">▼</span>
-                    </button>
-                </div>
-            </div>
-            <!-- 
-                w-full: Full width button
-                flex justify-between: Space between title and arrow
-                hover:bg-gray-50: Hover background
-                border-t border-gray-200: Top border for content area
-                Accordions save space by collapsing content
-            -->
-        </div>
+        <!-- TASK 1: Modal/Dialog Component -->
 
-        <!-- 
-            TASK 6: Card with Badge
-            Create a product card with badge
-            
-            Instructions:
-            1. Create card with image placeholder
-            2. Add absolute positioned badge (NEW, SALE, etc.)
-            3. Include product info, price, and button
-            4. Use grid or flex for layout
-            5. Add hover effects
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 6: Product Card with Badge</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow relative">
-                    <div class="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">
-                        SALE
-                    </div>
-                    <div class="w-full h-48 bg-gradient-to-br from-blue-400 to-purple-500"></div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Product Name</h3>
-                        <p class="text-gray-600 mb-4">Product description goes here.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-2xl font-bold text-gray-800">$99.99</span>
-                            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                                Add to Cart
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <!-- 
-                    absolute top-4 left-4: Badge position
-                    z-10: Ensure badge appears above image
-                    rounded-full: Pill-shaped badge
-                    hover:shadow-xl: Enhanced shadow on hover
-                    transition-shadow: Smooth shadow transition
-                    Product cards are common in e-commerce
-                -->
-            </div>
-        </div>
+        <div class="bg-white p-6 rounded-lg mb-6">
 
-        <!-- 
-            TASK 7: Progress Bar
-            Create a progress indicator
-            
-            Instructions:
-            1. Create container with background
-            2. Add inner bar with percentage width
-            3. Use gradient or solid color
-            4. Add text label showing percentage
-            5. Style with rounded corners
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 7: Progress Bar</h2>
-            <div class="space-y-4">
-                <div>
-                    <div class="flex justify-between mb-2">
-                        <span class="text-gray-700 font-medium">Progress</span>
-                        <span class="text-gray-600">75%</span>
-                    </div>
-                    <div class="w-full bg-gray-200 rounded-full h-4 overflow-hidden">
-                        <div class="bg-gradient-to-r from-blue-500 to-purple-500 h-full rounded-full" style="width: 75%"></div>
-                    </div>
-                </div>
-                <div>
-                    <div class="flex justify-between mb-2">
-                        <span class="text-gray-700 font-medium">Loading</span>
-                        <span class="text-gray-600">45%</span>
-                    </div>
-                    <div class="w-full bg-gray-200 rounded-full h-6 overflow-hidden">
-                        <div class="bg-green-500 h-full rounded-full flex items-center justify-end pr-2" style="width: 45%">
-                            <span class="text-white text-xs font-semibold">45%</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- 
-                    rounded-full: Fully rounded progress bar
-                    h-4: Height of progress bar
-                    overflow-hidden: Clip inner bar to rounded corners
-                    bg-gradient-to-r: Gradient fill
-                    Progress bars show completion status
-                -->
-            </div>
-        </div>
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 1: Modal Component</h2>
 
-        <!-- 
-            TASK 8: Navigation Bar with Dropdown
-            Combine navigation with dropdown menus
-            
-            Instructions:
-            1. Create horizontal navigation
-            2. Add dropdown menus to items
-            3. Use hover states
-            4. Style with proper spacing
-            5. Make responsive
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 8: Navigation Bar with Dropdown</h2>
-            <nav class="bg-gray-800 rounded-lg">
-                <div class="flex items-center justify-between p-4">
-                    <div class="text-white text-xl font-bold">Logo</div>
-                    <div class="flex items-center gap-6">
-                        <a href="#" class="text-white hover:text-blue-400 transition-colors">Home</a>
-                        <div class="relative group">
-                            <a href="#" class="text-white hover:text-blue-400 transition-colors flex items-center gap-1">
-                                Products
-                                <span>▼</span>
-                            </a>
-                            <div class="absolute top-full left-0 mt-2 bg-white rounded-lg shadow-xl min-w-48 hidden group-hover:block">
-                                <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-t-lg">Category 1</a>
-                                <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-100">Category 2</a>
-                                <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-b-lg">Category 3</a>
-                            </div>
-                        </div>
-                        <a href="#" class="text-white hover:text-blue-400 transition-colors">About</a>
-                        <a href="#" class="text-white hover:text-blue-400 transition-colors">Contact</a>
-                    </div>
-                </div>
-                <!-- 
-                    group: Parent element for group-hover
-                    group-hover:block: Show dropdown on parent hover
-                    transition-colors: Smooth color transitions
-                    Navigation bars are essential website components
-                -->
-            </nav>
-        </div>
+            <button class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700" onclick="document.getElementById('modal-overlay').classList.remove('hidden');">
 
-        <!-- Navigation -->
-        <div class="mt-8 flex justify-between">
-            <a href="../level8/eight.html" class="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
-                ← Previous Level
-            </a>
-            <a href="../level10/ten.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                Next Level: Final Project →
-            </a>
-        </div>
-    </div>
-</body>
-</html>
+                Open Modal
 
+            </button>
+
+            <!-- Modal Structure -->
+
+            <div id="modal-overlay" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm hidden justify-center items-center z-50">
+
+                <div class="bg-white rounded-xl shadow-2xl max-w-md w-full mx-4 relative p-6">
+
+                    <button class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 focus:outline-none" onclick="document.getElementById('modal-overlay').classList.add('hidden');">
+
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+
+                    </button>
+
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Modal Title</h3>
+
+                    <p class="text-gray-600 mb-6">This is a modal dialog component.</p>
+
+                    <div class="flex gap-4 justify-end">
+
+                        <button class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-100" onclick="document.getElementById('modal-overlay').classList.add('hidden');">Cancel</button>
+
+                        <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Confirm</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- TASK 2: Dropdown Menu -->
+
+        <div class="bg-white p-6 rounded-lg mb-6">
+
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 2: Dropdown Menu</h2>
+
+            <div class="relative inline-block">
+
+                <button class="bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-700 flex items-center gap-2">
+
+                    Menu
+
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+
+                </button>
+
+                <div class="absolute top-full left-0 mt-2 bg-white rounded-lg shadow-md min-w-48 hidden group-hover
