@@ -1,253 +1,135 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Level 6: Positioning & Layout</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Level 6: Positioning & Layout</title>
+
+    <!-- Tailwind CSS CDN Link -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
+
 <body class="bg-gray-100 min-h-screen">
-    <div class="container mx-auto p-8">
-        <h1 class="text-4xl font-bold text-gray-800 mb-6">
-            Level 6: Positioning & Advanced Layout
-        </h1>
 
-        <!-- 
-            TASK 1: Relative Positioning
-            Learn about relative positioning
-            
-            WHAT TO MODIFY: The second <div> tag below (line 30) - the green div that says "Relatively Positioned"
-            HOW TO IDENTIFY IT: Look for the div with class "bg-green-500" inside the gray container. It contains the text
-                                "Relatively Positioned". Currently has classes: bg-green-500, text-white, p-4, rounded,
-                                inline-block, relative, top-4, left-4
-            WHY THIS TAG: This div demonstrates relative positioning. The relative class allows it to be offset from its normal
-                          position using top-4 (moves down 16px) and left-4 (moves right 16px). Relative positioning is useful
-                          for fine-tuning element placement without affecting other elements' layout. It's commonly used for
-                          creating overlapping effects or subtle adjustments.
-            
-            Instructions:
-            1. Add "relative" class to create a positioning context
-            2. Use "top-4 left-4" to offset an element
-            3. Try different offset values: top-2, top-8, left-2, left-8
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 1: Relative Positioning</h2>
-            <div class="bg-gray-200 p-8 rounded relative" style="min-height: 200px;">
-                <div class="bg-blue-500 text-white p-4 rounded inline-block">
-                    Normal Position
-                </div>
-                <!-- TASK 1: Modify this <div> tag - Look for bg-green-500 with "Relatively Positioned" text -->
-                <div class="bg-green-500 text-white p-4 rounded inline-block relative top-4 left-4">
-                    Relatively Positioned
-                </div>
-                <!-- 
-                    relative: Position relative to its normal position
-                    top-4: Move 1rem (16px) down from normal position
-                    left-4: Move 1rem (16px) right from normal position
-                    Negative values: -top-4, -left-4 move in opposite direction
-                -->
-            </div>
-        </div>
+    <div class="container mx-auto p-8">
 
-        <!-- 
-            TASK 2: Absolute Positioning
-            Learn to position elements absolutely
-            
-            WHAT TO MODIFY: The <div> tags below (lines 58, 61) - the red and purple absolutely positioned divs
-            HOW TO IDENTIFY IT: Look for the div with class "bg-red-500" that says "Top Right Corner" and the div with
-                                class "bg-purple-500" that says "Bottom Left Corner". They are inside a relative container.
-                                Red div has: absolute, top-0, right-0. Purple div has: absolute, bottom-0, left-0
-            WHY THIS TAG: These divs demonstrate absolute positioning. Absolute elements are removed from normal document flow
-                          and positioned relative to the nearest positioned ancestor (the relative parent). top-0 right-0 positions
-                          at top-right corner, bottom-0 left-0 at bottom-left. Absolute positioning is essential for overlays,
-                          badges, tooltips, and complex layouts where elements need precise placement.
-            
-            Instructions:
-            1. Parent needs "relative" class
-            2. Child needs "absolute" class
-            3. Position using: top-0, right-0, bottom-0, left-0
-            4. Try positioning in corners: top-0 right-0
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 2: Absolute Positioning</h2>
-            <div class="bg-gray-200 p-8 rounded relative" style="min-height: 200px;">
-                <div class="bg-blue-500 text-white p-4 rounded">
-                    Parent Container (relative)
-                </div>
-                <!-- TASK 2: Modify this <div> tag - Look for bg-red-500 with "Top Right Corner" text -->
-                <div class="bg-red-500 text-white p-4 rounded absolute top-0 right-0">
-                    Top Right Corner
-                </div>
-                <!-- TASK 2: Modify this <div> tag - Look for bg-purple-500 with "Bottom Left Corner" text -->
-                <div class="bg-purple-500 text-white p-4 rounded absolute bottom-0 left-0">
-                    Bottom Left Corner
-                </div>
-                <!-- 
-                    relative: Parent creates positioning context
-                    absolute: Positioned relative to nearest positioned ancestor
-                    top-0 right-0: Position at top-right corner
-                    bottom-0 left-0: Position at bottom-left corner
-                    Absolute elements are removed from normal document flow
-                -->
-            </div>
-        </div>
+        <h1 class="text-4xl font-bold text-gray-800 mb-6">
 
-        <!-- 
-            TASK 3: Fixed Positioning
-            Learn to create fixed elements (like sticky headers)
-            
-            Instructions:
-            1. Use "fixed" class
-            2. Position using top, right, bottom, left
-            3. Add z-index for layering: z-10, z-20, z-50
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 3: Fixed Positioning</h2>
-            <div class="bg-gray-200 p-8 rounded relative" style="min-height: 300px;">
-                <div class="bg-blue-600 text-white p-4 rounded fixed top-4 right-4 z-10 shadow-lg">
-                    Fixed Element (stays in viewport)
-                </div>
-                <p class="text-gray-700">
-                    Scroll the page - the blue box above stays fixed in the viewport!
-                    Fixed elements are positioned relative to the viewport, not the document.
-                </p>
-                <!-- 
-                    fixed: Positioned relative to viewport (stays visible when scrolling)
-                    top-4 right-4: 1rem from top and right edges
-                    z-10: Z-index of 10 (higher numbers appear on top)
-                    shadow-lg: Large shadow for visibility
-                    Useful for: sticky headers, floating buttons, modals
-                -->
-            </div>
-        </div>
+            Level 6: Positioning & Advanced Layout
 
-        <!-- 
-            TASK 4: Sticky Positioning
-            Learn to create sticky elements
-            
-            Instructions:
-            1. Use "sticky" class
-            2. Add "top-0" to stick to top when scrolling
-            3. Add background and z-index for visibility
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 4: Sticky Positioning</h2>
-            <div class="space-y-4">
-                <div class="bg-green-600 text-white p-4 rounded sticky top-0 z-20 shadow-md">
-                    Sticky Header (scroll to see it stick)
-                </div>
-                <!-- 
-                    sticky: Element sticks to specified position when scrolling
-                    top-0: Sticks to top of viewport when scrolling past
-                    z-20: Higher z-index to appear above other content
-                    Sticky works like relative until scroll threshold, then like fixed
-                -->
-                <div class="bg-gray-100 p-4 rounded">Content 1</div>
-                <div class="bg-gray-100 p-4 rounded">Content 2</div>
-                <div class="bg-gray-100 p-4 rounded">Content 3</div>
-                <div class="bg-gray-100 p-4 rounded">Content 4</div>
-                <div class="bg-gray-100 p-4 rounded">Content 5</div>
-            </div>
-        </div>
+        </h1>
 
-        <!-- 
-            TASK 5: Z-Index Layering
-            Learn to control element stacking order
-            
-            Instructions:
-            1. Create overlapping elements with different z-index values
-            2. Use z-0, z-10, z-20, z-30, z-40, z-50
-            3. Higher z-index appears on top
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 5: Z-Index Layering</h2>
-            <div class="bg-gray-200 p-8 rounded relative" style="min-height: 250px;">
-                <div class="bg-blue-500 text-white p-6 rounded absolute top-4 left-4 z-10">
-                    Layer 1 (z-10)
-                </div>
-                <div class="bg-green-500 text-white p-6 rounded absolute top-12 left-12 z-20">
-                    Layer 2 (z-20)
-                </div>
-                <div class="bg-purple-500 text-white p-6 rounded absolute top-20 left-20 z-30">
-                    Layer 3 (z-30) - Top Layer
-                </div>
-                <!-- 
-                    z-10: Z-index of 10
-                    z-20: Z-index of 20
-                    z-30: Z-index of 30
-                    Higher z-index values appear above lower ones
-                    Only works on positioned elements (relative, absolute, fixed, sticky)
-                -->
-            </div>
-        </div>
+        <!-- TASK 1: Relative Positioning -->
 
-        <!-- 
-            TASK 6: Overlay with Absolute Positioning
-            Create an image overlay card
-            
-            Instructions:
-            1. Create a relative container with an image
-            2. Add absolute positioned overlay with:
-               - bottom-0 left-0 right-0 (full width at bottom)
-               - bg-black bg-opacity-50 (semi-transparent)
-               - text-white
-            3. Add padding and rounded corners
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 6: Image Overlay Card</h2>
-            <div class="relative rounded-lg overflow-hidden max-w-md">
-                <div class="w-full h-64 bg-gradient-to-br from-blue-400 to-purple-500"></div>
-                <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-6">
-                    <h3 class="text-2xl font-bold mb-2">Overlay Title</h3>
-                    <p>This overlay is positioned absolutely at the bottom of the image.</p>
-                </div>
-                <!-- 
-                    relative: Container creates positioning context
-                    absolute bottom-0: Positioned at bottom
-                    left-0 right-0: Spans full width
-                    bg-opacity-50: 50% opacity background (semi-transparent)
-                    overflow-hidden: Hides overflow for rounded corners
-                -->
-            </div>
-        </div>
+        <div class="bg-white p-6 rounded-lg mb-6">
 
-        <!-- 
-            TASK 7: Floating Action Button
-            Create a fixed floating button
-            
-            Instructions:
-            1. Use fixed positioning
-            2. Position at bottom-right: bottom-8 right-8
-            3. Make it circular: rounded-full
-            4. Add shadow and hover effects
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 7: Floating Action Button</h2>
-            <div class="bg-gray-200 p-8 rounded relative" style="min-height: 200px;">
-                <p class="text-gray-700 mb-4">Scroll to see the floating button in action!</p>
-                <button class="fixed bottom-8 right-8 bg-blue-600 text-white w-16 h-16 rounded-full shadow-lg hover:bg-blue-700 transition-colors z-50 flex items-center justify-center text-2xl">
-                    +
-                </button>
-                <!-- 
-                    fixed bottom-8 right-8: Fixed at bottom-right, 2rem from edges
-                    rounded-full: Perfect circle (50% border-radius)
-                    w-16 h-16: Width and height of 4rem (64px)
-                    z-50: High z-index to appear above all content
-                    Common pattern for: contact buttons, chat widgets, scroll-to-top buttons
-                -->
-            </div>
-        </div>
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 1: Relative Positioning</h2>
 
-        <!-- Navigation -->
-        <div class="mt-8 flex justify-between">
-            <a href="../level5/five.html" class="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
-                ← Previous Level
-            </a>
-            <a href="../level7/seven.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                Next Level: Forms & Inputs →
-            </a>
-        </div>
-    </div>
-</body>
-</html>
+            <div class="bg-gray-200 p-8 rounded relative" style="min-height: 200px;">
 
+                <div class="bg-blue-500 text-white p-4 rounded inline-block">
+
+                    Normal Position
+
+                </div>
+
+                <!-- TASK 1: Modify this div -->
+
+                <div class="bg-green-500 text-white p-4 rounded inline-block relative top-4 left-4">
+
+                    Relatively Positioned
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- TASK 2: Absolute Positioning -->
+
+        <div class="bg-white p-6 rounded-lg mb-6">
+
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 2: Absolute Positioning</h2>
+
+            <div class="bg-gray-200 p-8 rounded relative" style="min-height: 200px;">
+
+                <div class="bg-blue-500 text-white p-4 rounded">
+
+                    Parent Container (relative)
+
+                </div>
+
+                <!-- TASK 2: Modify this div -->
+
+                <div class="bg-red-500 text-white p-4 rounded absolute top-0 right-0">
+
+                    Top Right Corner
+
+                </div>
+
+                <!-- TASK 2: Modify this div -->
+
+                <div class="bg-purple-500 text-white p-4 rounded absolute bottom-0 left-0">
+
+                    Bottom Left Corner
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- TASK 3: Fixed Positioning -->
+
+        <div class="bg-white p-6 rounded-lg mb-6">
+
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 3: Fixed Positioning</h2>
+
+            <div class="bg-gray-200 p-8 rounded relative" style="min-height: 300px;">
+
+                <div class="bg-blue-600 text-white p-4 rounded fixed top-4 right-4 z-10 shadow-lg">
+
+                    Fixed Element (stays in viewport)
+
+                </div>
+
+                <p class="text-gray-700">
+
+                    Scroll the page - the blue box above stays fixed in the viewport!
+
+                    Fixed elements are positioned relative to the viewport, not the document.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- TASK 4: Sticky Positioning -->
+
+        <div class="bg-white p-6 rounded-lg mb-6">
+
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 4: Sticky Positioning</h2>
+
+            <div class="space-y-4">
+
+                <div class="bg-green-600 text-white p-4 rounded sticky top-0 z-20 shadow-md">
+
+                    Sticky Header (scroll to see it stick)
+
+                </div>
+
+                <div class="bg-gray-100 p-4 rounded">Content 1</div>
+
+                <div class="bg-gray-100 p-4 rounded">Content 2</div>
+
+                <div class="bg-gray-100 p-4 rounded">Content 3</div>
+
+                <div class="bg-gray-10
