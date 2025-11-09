@@ -1,290 +1,109 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Level 5: Responsive Design</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Level 5: Responsive Design</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
+
 <body class="bg-gray-100 min-h-screen">
-    <div class="container mx-auto p-4 md:p-8">
-        <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-            Level 5: Responsive Design with Tailwind
-        </h1>
 
-        <!-- 
-            TASK 1: Responsive Text Sizes
-            Learn to use responsive text utilities
-            
-            WHAT TO MODIFY: The <h3> tag below (line 28) - the heading that scales
-            HOW TO IDENTIFY IT: Look for the h3 element with text "This Heading Scales with Screen Size"
-                                It has blue text color (text-blue-600). Currently has classes: text-2xl, md:text-3xl, 
-                                lg:text-4xl, font-bold, text-blue-600
-            WHY THIS TAG: This heading demonstrates responsive typography. Text sizes adapt to screen size: smaller on mobile
-                          (text-2xl), medium on tablets (md:text-3xl), and large on desktop (lg:text-4xl). Responsive text
-                          ensures readability on all devices - too large on mobile wastes space, too small on desktop is hard
-                          to read. This is essential for creating truly responsive designs.
-            
-            Instructions:
-            1. Use responsive prefixes for text sizes:
-               - text-2xl (mobile)
-               - md:text-3xl (tablet)
-               - lg:text-4xl (desktop)
-            2. Apply these to headings
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-4">Task 1: Responsive Typography</h2>
-            <!-- TASK 1: Modify this <h3> tag - Look for heading with "This Heading Scales with Screen Size" text -->
-            <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-600">
-                This Heading Scales with Screen Size
-            </h3>
-            <!-- 
-                text-2xl: Base size (mobile) - 1.5rem (24px)
-                md:text-3xl: Medium screens (≥768px) - 1.875rem (30px)
-                lg:text-4xl: Large screens (≥1024px) - 2.25rem (36px)
-                Tailwind breakpoints: sm (640px), md (768px), lg (1024px), xl (1280px), 2xl (1536px)
-            -->
-        </div>
+    <div class="container mx-auto p-4 md:p-8">
 
-        <!-- 
-            TASK 2: Responsive Padding and Margins
-            Adjust spacing for different screen sizes
-            
-            WHAT TO MODIFY: The inner <div> tag below (line 52) - the blue container with responsive padding
-            HOW TO IDENTIFY IT: Look for the div with class "bg-blue-100" that contains the paragraph about responsive padding.
-                                Currently has classes: bg-blue-100, p-4, md:p-6, lg:p-8, rounded
-            WHY THIS TAG: This div demonstrates responsive spacing. Padding increases with screen size: p-4 (16px) on mobile,
-                          p-6 (24px) on tablets, p-8 (32px) on desktop. Larger screens can accommodate more spacing, creating
-                          better visual breathing room. Responsive spacing is crucial for professional layouts that feel
-                          comfortable on all devices.
-            
-            Instructions:
-            1. Use responsive padding:
-               - p-4 (mobile)
-               - md:p-6 (tablet)
-               - lg:p-8 (desktop)
-            2. Apply responsive margins similarly
-        -->
-        <div class="bg-white p-4 md:p-6 lg:p-8 rounded-lg mb-6">
-            <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-4">Task 2: Responsive Spacing</h2>
-            <!-- TASK 2: Modify this <div> tag - Look for bg-blue-100 with responsive padding -->
-            <div class="bg-blue-100 p-4 md:p-6 lg:p-8 rounded">
-                <p class="text-gray-800">
-                    This container has responsive padding. Resize your browser to see the spacing change!
-                </p>
-                <!-- 
-                    p-4: Padding 1rem (16px) on mobile
-                    md:p-6: Padding 1.5rem (24px) on medium screens
-                    lg:p-8: Padding 2rem (32px) on large screens
-                    Same pattern works for: m (margin), px (horizontal), py (vertical)
-                -->
-            </div>
-        </div>
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
 
-        <!-- 
-            TASK 3: Responsive Grid Layout
-            Create layouts that adapt to screen size
-            
-            WHAT TO MODIFY: The <div> tag below (line 79) - the grid container
-            HOW TO IDENTIFY IT: Look for the div with class "grid" that contains four colored divs (purple, pink, indigo, teal).
-                                Currently has classes: grid, grid-cols-1, sm:grid-cols-2, md:grid-cols-3, lg:grid-cols-4, gap-4, md:gap-6
-            WHY THIS TAG: This div demonstrates responsive grid columns. The grid adapts from 1 column (mobile) to 4 columns (desktop),
-                          with intermediate breakpoints at 2 and 3 columns. This ensures content is readable on small screens
-                          while utilizing available space on larger screens. Responsive grids are the foundation of modern
-                          responsive web design.
-            
-            Instructions:
-            1. Create a responsive grid:
-               - grid-cols-1 (mobile: 1 column)
-               - sm:grid-cols-2 (small: 2 columns)
-               - md:grid-cols-3 (medium: 3 columns)
-               - lg:grid-cols-4 (large: 4 columns)
-            2. Add responsive gaps: gap-4 md:gap-6
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-4">Task 3: Responsive Grid</h2>
-            <!-- TASK 3: Modify this <div> tag - Look for grid container with four colored items -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-                <div class="bg-purple-500 text-white p-6 rounded text-center">Item 1</div>
-                <div class="bg-pink-500 text-white p-6 rounded text-center">Item 2</div>
-                <div class="bg-indigo-500 text-white p-6 rounded text-center">Item 3</div>
-                <div class="bg-teal-500 text-white p-6 rounded text-center">Item 4</div>
-                <!-- 
-                    grid-cols-1: 1 column on mobile (default)
-                    sm:grid-cols-2: 2 columns on screens ≥640px
-                    md:grid-cols-3: 3 columns on screens ≥768px
-                    lg:grid-cols-4: 4 columns on screens ≥1024px
-                    Responsive design ensures content is readable on all devices
-                -->
-            </div>
-        </div>
+            Level 5: Responsive Design with Tailwind
 
-        <!-- 
-            TASK 4: Responsive Flex Direction
-            Change layout direction based on screen size
-            
-            WHAT TO MODIFY: The <div> tag below (line 106) - the gray flex container
-            HOW TO IDENTIFY IT: Look for the div with class "bg-gray-200" that contains three colored divs (red, yellow, orange).
-                                Currently has classes: bg-gray-200, p-4, rounded, flex, flex-col, md:flex-row, gap-4, items-center, justify-center
-            WHY THIS TAG: This div demonstrates responsive flex direction. On mobile (flex-col), items stack vertically for easier
-                          scrolling. On tablets/desktop (md:flex-row), items arrange horizontally to use wider screens effectively.
-                          This pattern is essential for navigation bars, hero sections, and content layouts that need to adapt
-                          to different screen orientations.
-            
-            Instructions:
-            1. Use responsive flex direction:
-               - flex-col (mobile: stack vertically)
-               - md:flex-row (tablet+: horizontal)
-            2. Add responsive alignment
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-4">Task 4: Responsive Flex Direction</h2>
-            <!-- TASK 4: Modify this <div> tag - Look for bg-gray-200 with flex-col md:flex-row -->
-            <div class="bg-gray-200 p-4 rounded flex flex-col md:flex-row gap-4 items-center justify-center">
-                <div class="bg-red-500 text-white p-6 rounded text-center flex-1">Item 1</div>
-                <div class="bg-yellow-500 text-white p-6 rounded text-center flex-1">Item 2</div>
-                <div class="bg-orange-500 text-white p-6 rounded text-center flex-1">Item 3</div>
-                <!-- 
-                    flex-col: Stack items vertically on mobile
-                    md:flex-row: Arrange horizontally on medium+ screens
-                    flex-1: Items grow to fill available space equally
-                    This pattern is common in navigation bars
-                -->
-            </div>
-        </div>
+        </h1>
 
-        <!-- 
-            TASK 5: Responsive Visibility
-            Show/hide elements based on screen size
-            
-            WHAT TO MODIFY: The <div> tags below (lines 134, 142) - the green and blue message divs
-            HOW TO IDENTIFY IT: Look for the div with green background (bg-green-500) that says "visible on mobile only"
-                                and the div with blue background (bg-blue-500) that says "visible on tablet/desktop only"
-            WHY THIS TAG: These divs demonstrate responsive visibility. The green div uses block md:hidden to show only on mobile,
-                          useful for mobile-specific messages or navigation. The blue div uses hidden md:block to show only on
-                          larger screens, useful for complex navigation or desktop-only features. This allows showing different
-                          content or layouts optimized for each device type.
-            
-            Instructions:
-            1. Hide on mobile, show on desktop:
-               - hidden (hidden by default)
-               - md:block (visible on medium+)
-            2. Show on mobile, hide on desktop:
-               - block (visible by default)
-               - md:hidden (hidden on medium+)
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-4">Task 5: Responsive Visibility</h2>
-            <div class="space-y-4">
-                <!-- TASK 5: Modify this <div> tag - Look for bg-green-500 with "mobile only" text -->
-                <div class="bg-green-500 text-white p-4 rounded block md:hidden">
-                    This message is visible on mobile only
-                </div>
-                <!-- 
-                    block: Display as block element
-                    md:hidden: Hide on medium screens and above
-                -->
-                
-                <!-- TASK 5: Modify this <div> tag - Look for bg-blue-500 with "tablet/desktop only" text -->
-                <div class="bg-blue-500 text-white p-4 rounded hidden md:block">
-                    This message is visible on tablet/desktop only
-                </div>
-                <!-- 
-                    hidden: Hide by default
-                    md:block: Show as block on medium screens and above
-                    Useful for showing different content on mobile vs desktop
-                -->
-            </div>
-        </div>
+        <!-- TASK 1: Responsive Text Sizes -->
 
-        <!-- 
-            TASK 6: Responsive Navigation
-            Create a mobile-friendly navigation bar
-            
-            WHAT TO MODIFY: The <div> tag below (line 167) - the inner flex container inside nav
-            HOW TO IDENTIFY IT: Look for the div inside the nav element (bg-gray-800) that contains "Logo" text and navigation
-                                links (Home, About, Services, Contact). Currently has classes: flex, flex-col, md:flex-row,
-                                md:justify-between, md:items-center, gap-4
-            WHY THIS TAG: This div is the responsive navigation container. On mobile (flex-col), logo and links stack vertically
-                          for easier touch interaction. On desktop (md:flex-row), they arrange horizontally with justify-between
-                          pushing logo left and links right. Responsive navigation is critical for mobile usability - horizontal
-                          nav bars don't work well on small screens.
-            
-            Instructions:
-            1. Create a navbar that:
-               - Stacks vertically on mobile (flex-col)
-               - Arranges horizontally on desktop (md:flex-row)
-            2. Add a hamburger menu indicator on mobile
-            3. Make links full-width on mobile, auto-width on desktop
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-4">Task 6: Responsive Navigation</h2>
-            <nav class="bg-gray-800 rounded-lg p-4">
-                <!-- TASK 6: Modify this <div> tag - Look for div with "Logo" and nav links inside nav -->
-                <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
-                    <div class="text-white text-xl font-bold">Logo</div>
-                    <div class="flex flex-col md:flex-row gap-4">
-                        <a href="#" class="text-white hover:text-blue-400 text-center md:text-left py-2 md:py-0">Home</a>
-                        <a href="#" class="text-white hover:text-blue-400 text-center md:text-left py-2 md:py-0">About</a>
-                        <a href="#" class="text-white hover:text-blue-400 text-center md:text-left py-2 md:py-0">Services</a>
-                        <a href="#" class="text-white hover:text-blue-400 text-center md:text-left py-2 md:py-0">Contact</a>
-                    </div>
-                </div>
-                <!-- 
-                    flex-col md:flex-row: Stack on mobile, horizontal on desktop
-                    text-center md:text-left: Center text on mobile, left-align on desktop
-                    py-2 md:py-0: Vertical padding on mobile only
-                    Responsive navigation is essential for mobile usability
-                -->
-            </nav>
-        </div>
+        <div class="bg-white p-6 rounded-lg mb-6">
 
-        <!-- 
-            TASK 7: Responsive Container
-            Create a responsive page layout
-            
-            WHAT TO MODIFY: The <div> tag below (line 198) - the container div
-            HOW TO IDENTIFY IT: Look for the div with class "container" and "bg-blue-100" that contains "Responsive Container"
-                                heading and paragraph. Currently has classes: container, mx-auto, bg-blue-100, p-4, md:p-8, rounded-lg
-            WHY THIS TAG: This div demonstrates the container utility. The container class provides responsive max-widths at
-                          different breakpoints, automatically centering content on larger screens while staying full-width on mobile.
-                          Combined with mx-auto for centering, this creates the standard page layout pattern. Containers prevent
-                          content from becoming too wide on large screens, improving readability.
-            
-            Instructions:
-            1. Create a responsive container:
-               - Full width on mobile
-               - Centered with max-width on desktop
-               - Responsive padding
-            2. Use container class with mx-auto
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-4">Task 7: Responsive Container</h2>
-            <!-- TASK 7: Modify this <div> tag - Look for container with "Responsive Container" text -->
-            <div class="container mx-auto bg-blue-100 p-4 md:p-8 rounded-lg">
-                <h3 class="text-2xl font-bold text-gray-800 mb-4">Responsive Container</h3>
-                <p class="text-gray-700">
-                    This container uses Tailwind's responsive utilities to adapt to different screen sizes.
-                    On mobile, it takes full width. On larger screens, it's centered with a maximum width.
-                </p>
-                <!-- 
-                    container: Responsive container with max-widths at breakpoints
-                    mx-auto: Horizontal margin auto (centers the container)
-                    Container widths: sm (640px), md (768px), lg (1024px), xl (1280px), 2xl (1536px)
-                -->
-            </div>
-        </div>
+            <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-4">Task 1: Responsive Text Sizes</h2>
 
-        <!-- Navigation -->
-        <div class="mt-8 flex flex-col sm:flex-row justify-between gap-4">
-            <a href="../level4/four.html" class="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors text-center">
-                ← Previous Level
-            </a>
-            <a href="../level6/six.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors text-center">
-                Next Level: Positioning →
-            </a>
-        </div>
-    </div>
-</body>
-</html>
+            <!-- TASK 1: Modify this <h3> tag - Look for heading with "This Heading Scales" -->
 
+            <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-600">
+
+                This Heading Scales with Screen Size
+
+            </h3>
+
+        </div>
+
+        <!-- TASK 2: Responsive Padding and Margins -->
+
+        <div class="bg-white p-6 rounded-lg mb-6">
+
+            <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-4">Task 2: Responsive Padding and Margins</h2>
+
+            <!-- TASK 2: Modify this <div> tag - Look for bg-blue-100 with responsive padding -->
+
+            <div class="bg-blue-100 p-4 md:p-6 lg:p-8 rounded">
+
+                <p class="text-gray-800">
+
+                    This container has responsive padding. Resize your browser to see the effect.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- TASK 3: Responsive Grid Layout -->
+
+        <div class="bg-white p-6 rounded-lg mb-6">
+
+            <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-4">Task 3: Responsive Grid Layout</h2>
+
+            <!-- TASK 3: Modify this <div> tag - Look for the div with class "grid" -->
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+
+                <div class="bg-red-500 text-white p-6 rounded text-center">Item 1</div>
+
+                <div class="bg-yellow-500 text-white p-6 rounded text-center">Item 2</div>
+
+                <div class="bg-orange-500 text-white p-6 rounded text-center">Item 3</div>
+
+                <div class="bg-green-500 text-white p-6 rounded text-center">Item 4</div>
+
+            </div>
+
+        </div>
+
+         <!-- TASK 4: Responsive Flex Layout -->
+
+        <div class="bg-white p-6 rounded-lg mb-6">
+
+            <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-4">Task 4: Responsive Flex Layout</h2>
+
+            <!-- TASK 4: Modify this <div> tag - Look for bg-gray-200 with flex-col md:flex-row -->
+
+            <div class="bg-gray-200 p-4 rounded flex flex-col md:flex-row gap-4 items-center">
+
+                <div class="bg-red-500 text-white p-6 rounded text-center flex-1">Item 1</div>
+
+                <div class="bg-yellow-500 text-white p-6 rounded text-center flex-1">Item 2</div>
+
+                <div class="bg-orange-500 text-white p-6 rounded text-center flex-1">Item 3</div>
+
+            </div>
+
+        </div>
+
+        <!-- TASK 5: Responsive Visibility -->
+
+        <div class="bg-white p-6 rounded-lg mb-6">
+
+            <h2 class="text-xl md:text-2
