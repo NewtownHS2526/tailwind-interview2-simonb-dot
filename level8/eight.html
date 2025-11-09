@@ -1,301 +1,109 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Level 8: Advanced Styling - Shadows, Gradients & Effects</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Level 8: Advanced Styling - Shadows, Gradients & Effects</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
-<body class="bg-gray-100 min-h-screen">
-    <div class="container mx-auto p-8">
-        <h1 class="text-4xl font-bold text-gray-800 mb-6">
-            Level 8: Advanced Styling - Shadows, Gradients & Effects
-        </h1>
 
-        <!-- 
-            TASK 1: Box Shadows
-            Learn different shadow utilities
-            
-            WHAT TO MODIFY: The <div> tags below (lines 32-47) - all the shadow demonstration divs
-            HOW TO IDENTIFY IT: Look for the six divs inside the grid that each have different shadow classes (shadow-sm, shadow,
-                                shadow-md, shadow-lg, shadow-xl, shadow-2xl). Each contains text showing its shadow size.
-            WHY THIS TAG: These divs demonstrate box shadows which add depth and elevation to elements. Shadows create visual
-                          hierarchy - larger shadows (shadow-xl, shadow-2xl) make elements appear to float higher. Shadows are
-                          essential for cards, buttons, modals, and any element that needs to stand out from the background.
-                          They're a key design tool for creating modern, polished interfaces.
-            
-            Instructions:
-            1. Try different shadow sizes:
-               - shadow-sm (small)
-               - shadow (default)
-               - shadow-md (medium)
-               - shadow-lg (large)
-               - shadow-xl (extra large)
-               - shadow-2xl (2x extra large)
-            2. Add colored shadows: shadow-blue-500
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 1: Box Shadows</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                <!-- TASK 1: Modify these <div> tags - Look for divs with shadow-sm, shadow, shadow-md, etc. -->
-                <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <p class="text-gray-700">shadow-sm</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <p class="text-gray-700">shadow</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <p class="text-gray-700">shadow-md</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <p class="text-gray-700">shadow-lg</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-xl">
-                    <p class="text-gray-700">shadow-xl</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-2xl">
-                    <p class="text-gray-700">shadow-2xl</p>
-                </div>
-                <!-- 
-                    shadow-sm: Small shadow (0 1px 2px rgba(0,0,0,0.05))
-                    shadow: Default shadow (0 1px 3px rgba(0,0,0,0.1))
-                    shadow-md: Medium shadow (0 4px 6px rgba(0,0,0,0.1))
-                    shadow-lg: Large shadow (0 10px 15px rgba(0,0,0,0.1))
-                    shadow-xl: Extra large shadow (0 20px 25px rgba(0,0,0,0.1))
-                    shadow-2xl: 2x extra large shadow (0 25px 50px rgba(0,0,0,0.25))
-                    Shadows add depth and elevation to elements
-                -->
-            </div>
-        </div>
+<body class="bg-gray-100 min-h-screen p-8">
 
-        <!-- 
-            TASK 2: Gradient Backgrounds
-            Learn to create gradients
-            
-            Instructions:
-            1. Create linear gradients:
-               - bg-gradient-to-r (left to right)
-               - bg-gradient-to-l (right to left)
-               - bg-gradient-to-t (bottom to top)
-               - bg-gradient-to-b (top to bottom)
-               - bg-gradient-to-br (top-left to bottom-right)
-            2. Add color stops: from-blue-500 to-purple-500
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 2: Gradient Backgrounds</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="bg-gradient-to-r from-blue-500 to-purple-500 text-white p-8 rounded-lg text-center">
-                    <p class="text-xl font-bold">Left to Right</p>
-                </div>
-                <div class="bg-gradient-to-br from-pink-500 to-orange-500 text-white p-8 rounded-lg text-center">
-                    <p class="text-xl font-bold">Diagonal</p>
-                </div>
-                <div class="bg-gradient-to-t from-green-500 to-blue-500 text-white p-8 rounded-lg text-center">
-                    <p class="text-xl font-bold">Bottom to Top</p>
-                </div>
-                <div class="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white p-8 rounded-lg text-center">
-                    <p class="text-xl font-bold">3-Color Gradient</p>
-                </div>
-                <!-- 
-                    bg-gradient-to-r: Linear gradient left to right
-                    from-blue-500: Starting color
-                    to-purple-500: Ending color
-                    via-pink-500: Middle color (for 3-color gradients)
-                    Gradients create visually appealing backgrounds
-                -->
-            </div>
-        </div>
+    <div class="container mx-auto">
 
-        <!-- 
-            TASK 3: Opacity and Transparency
-            Learn to control element opacity
-            
-            Instructions:
-            1. Use opacity utilities:
-               - opacity-0 (fully transparent)
-               - opacity-25 (25% opaque)
-               - opacity-50 (50% opaque)
-               - opacity-75 (75% opaque)
-               - opacity-100 (fully opaque)
-            2. Use bg-opacity for background opacity
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 3: Opacity & Transparency</h2>
-            <div class="bg-gray-200 p-8 rounded-lg relative">
-                <div class="grid grid-cols-5 gap-4">
-                    <div class="bg-blue-500 opacity-100 text-white p-4 rounded text-center">100%</div>
-                    <div class="bg-blue-500 opacity-75 text-white p-4 rounded text-center">75%</div>
-                    <div class="bg-blue-500 opacity-50 text-white p-4 rounded text-center">50%</div>
-                    <div class="bg-blue-500 opacity-25 text-white p-4 rounded text-center">25%</div>
-                    <div class="bg-blue-500 opacity-0 text-white p-4 rounded text-center">0%</div>
-                </div>
-                <div class="mt-4 bg-black bg-opacity-50 text-white p-4 rounded">
-                    <p>This uses bg-opacity-50 for semi-transparent background</p>
-                </div>
-                <!-- 
-                    opacity-100: Fully opaque (default)
-                    opacity-50: 50% transparent
-                    bg-opacity-50: Background opacity only (text remains opaque)
-                    Useful for overlays, hover effects, disabled states
-                -->
-            </div>
-        </div>
+        <h1 class="text-4xl font-bold text-gray-800 mb-8 text-center">
 
-        <!-- 
-            TASK 4: Backdrop Blur
-            Learn glassmorphism effect
-            
-            Instructions:
-            1. Use backdrop-blur utilities:
-               - backdrop-blur-sm
-               - backdrop-blur
-               - backdrop-blur-md
-               - backdrop-blur-lg
-               - backdrop-blur-xl
-            2. Combine with bg-opacity for glass effect
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 4: Backdrop Blur (Glassmorphism)</h2>
-            <div class="relative bg-gradient-to-br from-blue-400 to-purple-500 p-8 rounded-lg overflow-hidden">
-                <div class="absolute inset-0 bg-white bg-opacity-20 backdrop-blur-lg rounded-lg p-6">
-                    <h3 class="text-2xl font-bold text-white mb-2">Glass Card</h3>
-                    <p class="text-white">This card uses backdrop-blur for a glassmorphism effect!</p>
-                </div>
-                <!-- 
-                    backdrop-blur-lg: Large blur effect on background
-                    bg-opacity-20: Semi-transparent white background
-                    absolute inset-0: Covers parent container
-                    Creates modern glassmorphism design trend
-                -->
-            </div>
-        </div>
+            Level 8: Advanced Styling - Shadows, Gradients & Effects
 
-        <!-- 
-            TASK 5: Transform and Scale
-            Learn transform utilities
-            
-            Instructions:
-            1. Use scale utilities:
-               - scale-0 (hidden)
-               - scale-50 (half size)
-               - scale-75, scale-90, scale-95
-               - scale-100 (normal)
-               - scale-105, scale-110, scale-125, scale-150
-            2. Combine with hover: hover:scale-110
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 5: Transform & Scale</h2>
-            <div class="grid grid-cols-3 gap-4">
-                <div class="bg-blue-500 text-white p-6 rounded-lg text-center scale-75">
-                    scale-75
-                </div>
-                <div class="bg-green-500 text-white p-6 rounded-lg text-center scale-100">
-                    scale-100
-                </div>
-                <div class="bg-purple-500 text-white p-6 rounded-lg text-center scale-125">
-                    scale-125
-                </div>
-            </div>
-            <div class="mt-6 flex justify-center">
-                <button class="bg-indigo-600 text-white px-8 py-4 rounded-lg hover:scale-110 transition-transform">
-                    Hover to Scale
-                </button>
-                <!-- 
-                    scale-75: Scale to 75% size
-                    scale-100: Normal size (100%)
-                    scale-125: Scale to 125% size
-                    hover:scale-110: Scale to 110% on hover
-                    transition-transform: Smooth transform animation
-                    Great for interactive elements and animations
-                -->
-            </div>
-        </div>
+        </h1>
 
-        <!-- 
-            TASK 6: Rotate and Skew
-            Learn rotation and skew transforms
-            
-            Instructions:
-            1. Use rotate utilities:
-               - rotate-0, rotate-45, rotate-90, rotate-180
-               - -rotate-45 (counter-clockwise)
-            2. Use skew utilities:
-               - skew-x-12, skew-y-12
-            3. Combine with hover effects
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 6: Rotate & Skew</h2>
-            <div class="grid grid-cols-3 gap-4 mb-4">
-                <div class="bg-red-500 text-white p-6 rounded-lg text-center rotate-0">
-                    No Rotation
-                </div>
-                <div class="bg-yellow-500 text-white p-6 rounded-lg text-center rotate-45">
-                    Rotate 45°
-                </div>
-                <div class="bg-green-500 text-white p-6 rounded-lg text-center -rotate-12">
-                    Rotate -12°
-                </div>
-            </div>
-            <div class="flex justify-center">
-                <div class="bg-blue-500 text-white p-6 rounded-lg text-center hover:rotate-12 transition-transform">
-                    Hover to Rotate
-                </div>
-            </div>
-            <!-- 
-                rotate-45: Rotate 45 degrees clockwise
-                -rotate-12: Rotate 12 degrees counter-clockwise
-                hover:rotate-12: Rotate on hover
-                transition-transform: Smooth rotation animation
-                Useful for decorative elements and hover effects
-            -->
-        </div>
+        <!-- TASK 1: Box Shadows -->
 
-        <!-- 
-            TASK 7: Combine Effects - Premium Card
-            Create a premium card with multiple effects
-            
-            Instructions:
-            1. Combine shadows, gradients, and transforms
-            2. Add hover effects: hover:shadow-2xl hover:scale-105
-            3. Use backdrop blur for overlay text
-            4. Create a visually stunning card
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 7: Premium Card with Combined Effects</h2>
-            <div class="flex justify-center">
-                <div class="relative bg-gradient-to-br from-purple-600 to-pink-600 rounded-xl p-8 shadow-2xl hover:shadow-2xl hover:scale-105 transition-all duration-300 max-w-md w-full overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-white bg-opacity-20 rounded-full -mr-16 -mt-16"></div>
-                    <div class="relative z-10">
-                        <h3 class="text-3xl font-bold text-white mb-4">Premium Card</h3>
-                        <p class="text-white text-lg mb-6">
-                            This card combines gradients, shadows, transforms, and hover effects for a premium look.
-                        </p>
-                        <button class="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">
-                            Get Started
-                        </button>
-                    </div>
-                    <!-- 
-                        shadow-2xl: Large shadow for depth
-                        hover:scale-105: Slight scale on hover
-                        transition-all duration-300: Smooth transitions
-                        bg-opacity-20: Semi-transparent overlay circles
-                        z-10: Ensure content appears above decorative elements
-                        Combining effects creates professional, modern designs
-                    -->
-                </div>
-            </div>
-        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
 
-        <!-- Navigation -->
-        <div class="mt-8 flex justify-between">
-            <a href="../level7/seven.html" class="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
-                ← Previous Level
-            </a>
-            <a href="../level9/nine.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                Next Level: Complex Components →
-            </a>
-        </div>
-    </div>
-</body>
-</html>
+            <h2 class="text-3xl font-semibold text-gray-800 mb-6">Task 1: Box Shadows</h2>
 
+            <p class="text-lg text-gray-700 mb-4">Learn different shadow utilities to add depth and elevation.</p>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+
+                    <p class="text-gray-700">shadow-sm</p>
+
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow text-center">
+
+                    <p class="text-gray-700">shadow</p>
+
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+
+                    <p class="text-gray-700">shadow-md</p>
+
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+
+                    <p class="text-gray-700">shadow-lg</p>
+
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-xl text-center">
+
+                    <p class="text-gray-700">shadow-xl</p>
+
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-2xl text-center">
+
+                    <p class="text-gray-700">shadow-2xl</p>
+
+                </div>
+
+            </div>
+
+            <div class="mt-6 p-4 bg-gray-50 rounded-md">
+
+                <p class="text-sm text-gray-600">
+
+                    <strong>Key Concept:</strong> Shadows add depth and hierarchy. Larger shadows (shadow-xl, shadow-2xl) make elements appear more elevated. Essential for cards, buttons, and modals.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- TASK 2: Gradient Backgrounds -->
+
+        <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+
+            <h2 class="text-3xl font-semibold text-gray-800 mb-6">Task 2: Gradient Backgrounds</h2>
+
+            <p class="text-lg text-gray-700 mb-4">Learn to create visually appealing gradients.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <div class="bg-gradient-to-r from-blue-500 to-purple-500 text-white p-6 rounded-lg text-center">
+
+                    <p class="text-xl font-bold">Left to Right</p>
+
+                </div>
+
+                <div class="bg-gradient-to-br from-pink-500 to-orange-500 text-white p-6 rounded-lg text-center">
+
+                    <p class="text-xl font-bold">Diagonal</p>
+
+                </div>
+
+                <div class="bg-gradient-to-t from-green-500 to-teal-500 text-white p
