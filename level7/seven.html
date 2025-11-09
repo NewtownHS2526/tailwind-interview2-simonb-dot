@@ -1,358 +1,161 @@
-<!DOCTYPE html>
+Copy<!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Level 7: Forms & Inputs</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Level 7: Forms & Inputs</title>
+
+    <!-- Tailwind CSS CDN -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
+
 <body class="bg-gray-100 min-h-screen">
-    <div class="container mx-auto p-8">
-        <h1 class="text-4xl font-bold text-gray-800 mb-6">
-            Level 7: Building Forms with Tailwind
-        </h1>
 
-        <!-- 
-            TASK 1: Basic Input Styling
-            Learn to style input fields
-            
-            WHAT TO MODIFY: The <input> tag below (line 32) - the name input field
-            HOW TO IDENTIFY IT: Look for the input element with type="text" that has placeholder "Enter your name".
-                                It's inside a form with label "Name". Currently has classes: w-full, px-4, py-2, border,
-                                border-gray-300, rounded-lg, focus:outline-none, focus:ring-2, focus:ring-blue-500, focus:border-transparent
-            WHY THIS TAG: This input demonstrates form field styling. The w-full makes it span full width, px-4 py-2 provides
-                          comfortable padding, border border-gray-300 creates a subtle border, rounded-lg softens corners,
-                          and the focus: classes create a blue ring on focus. Proper input styling is essential for user
-                          experience in forms - clear borders, focus states, and adequate padding make forms easier to use.
-            
-            Instructions:
-            1. Style an input with:
-               - w-full (full width)
-               - px-4 py-2 (padding)
-               - border border-gray-300 (border)
-               - rounded-lg (rounded corners)
-               - focus:outline-none focus:ring-2 (focus styles)
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 1: Styled Input Field</h2>
-            <form class="space-y-4">
-                <div>
-                    <label class="block text-gray-700 font-medium mb-2">Name</label>
-                    <!-- TASK 1: Modify this <input> tag - Look for input with placeholder "Enter your name" -->
-                    <input 
-                        type="text" 
-                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="Enter your name"
-                    >
-                    <!-- 
-                        w-full: Full width input
-                        px-4 py-2: Padding horizontal 1rem, vertical 0.5rem
-                        border border-gray-300: Border width 1px, gray color
-                        rounded-lg: Rounded corners (0.5rem)
-                        focus:outline-none: Remove default focus outline
-                        focus:ring-2 focus:ring-blue-500: Blue ring on focus
-                        focus:border-transparent: Hide border on focus
-                    -->
-                </div>
-            </form>
-        </div>
+    <div class="container mx-auto p-8">
 
-        <!-- 
-            TASK 2: Form Layout with Labels
-            Create a proper form with labels and spacing
-            
-            Instructions:
-            1. Use flex or grid for layout
-            2. Add labels with proper spacing
-            3. Style inputs consistently
-            4. Add mb-4 or space-y-4 for vertical spacing
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 2: Complete Form Layout</h2>
-            <form class="space-y-4">
-                <div>
-                    <label class="block text-gray-700 font-medium mb-2">Email Address</label>
-                    <input 
-                        type="email" 
-                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="email@example.com"
-                    >
-                </div>
-                <div>
-                    <label class="block text-gray-700 font-medium mb-2">Password</label>
-                    <input 
-                        type="password" 
-                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="Enter password"
-                    >
-                </div>
-                <!-- 
-                    space-y-4: Vertical spacing of 1rem between form elements
-                    block: Label displays as block element
-                    mb-2: Margin bottom of 0.5rem for label spacing
-                    Consistent styling creates professional forms
-                -->
-            </form>
-        </div>
+        <h1 class="text-4xl font-bold text-gray-800 mb-6">
 
-        <!-- 
-            TASK 3: Textarea Styling
-            Style textarea elements
-            
-            Instructions:
-            1. Apply similar styling to textarea
-            2. Add resize-none to disable resizing (optional)
-            3. Add rows attribute for height
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 3: Textarea Styling</h2>
-            <form>
-                <div>
-                    <label class="block text-gray-700 font-medium mb-2">Message</label>
-                    <textarea 
-                        rows="4"
-                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-                        placeholder="Enter your message here..."
-                    ></textarea>
-                    <!-- 
-                        rows="4": Sets initial height (4 lines)
-                        resize-none: Disables manual resizing by user
-                        Same styling as input for consistency
-                        Textareas are useful for longer text input
-                    -->
-                </div>
-            </form>
-        </div>
+            Level 7: Building Forms with Tailwind
 
-        <!-- 
-            TASK 4: Select Dropdown
-            Style select elements
-            
-            Instructions:
-            1. Style select with same classes as input
-            2. Add appearance-none for custom styling
-            3. Add background image for dropdown arrow
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 4: Select Dropdown</h2>
-            <form>
-                <div>
-                    <label class="block text-gray-700 font-medium mb-2">Country</label>
-                    <select 
-                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none bg-white"
-                    >
-                        <option>Select a country</option>
-                        <option>United States</option>
-                        <option>Canada</option>
-                        <option>United Kingdom</option>
-                        <option>Australia</option>
-                    </select>
-                    <!-- 
-                        appearance-none: Removes default browser styling
-                        bg-white: White background
-                        Select dropdowns need custom styling for consistency
-                    -->
-                </div>
-            </form>
-        </div>
+        </h1>
 
-        <!-- 
-            TASK 5: Checkboxes and Radio Buttons
-            Style form controls
-            
-            Instructions:
-            1. Create checkbox with label
-            2. Use flex for alignment
-            3. Add custom styling with accent colors
-            4. Create radio button group
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 5: Checkboxes & Radio Buttons</h2>
-            <form class="space-y-4">
-                <div class="flex items-center space-x-2">
-                    <input 
-                        type="checkbox" 
-                        id="terms"
-                        class="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                    >
-                    <label for="terms" class="text-gray-700">I agree to the terms and conditions</label>
-                    <!-- 
-                        w-5 h-5: Checkbox size 1.25rem (20px)
-                        text-blue-600: Checkmark color
-                        focus:ring-blue-500: Focus ring color
-                        flex items-center: Align checkbox and label
-                        space-x-2: Horizontal spacing between checkbox and label
-                    -->
-                </div>
-                
-                <div class="space-y-2">
-                    <p class="text-gray-700 font-medium mb-2">Select your preference:</p>
-                    <div class="flex items-center space-x-2">
-                        <input 
-                            type="radio" 
-                            id="option1"
-                            name="preference"
-                            class="w-5 h-5 text-blue-600 border-gray-300 focus:ring-blue-500"
-                        >
-                        <label for="option1" class="text-gray-700">Option 1</label>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <input 
-                            type="radio" 
-                            id="option2"
-                            name="preference"
-                            class="w-5 h-5 text-blue-600 border-gray-300 focus:ring-blue-500"
-                        >
-                        <label for="option2" class="text-gray-700">Option 2</label>
-                    </div>
-                    <!-- 
-                        name="preference": Groups radio buttons together
-                        Only one radio can be selected per group
-                        Same styling approach as checkboxes
-                    -->
-                </div>
-            </form>
-        </div>
+        <!--
 
-        <!-- 
-            TASK 6: Form with Validation States
-            Create error and success states
-            
-            Instructions:
-            1. Add error state: border-red-500, text-red-600
-            2. Add success state: border-green-500, text-green-600
-            3. Add error/success messages
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 6: Form Validation States</h2>
-            <form class="space-y-4">
-                <div>
-                    <label class="block text-gray-700 font-medium mb-2">Email</label>
-                    <input 
-                        type="email" 
-                        class="w-full px-4 py-2 border border-red-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
-                        placeholder="email@example.com"
-                    >
-                    <p class="text-red-600 text-sm mt-1">Please enter a valid email address</p>
-                    <!-- 
-                        border-red-500: Red border for error state
-                        text-red-600: Red text for error message
-                        text-sm: Small text size for messages
-                        mt-1: Small margin top for spacing
-                    -->
-                </div>
-                
-                <div>
-                    <label class="block text-gray-700 font-medium mb-2">Username</label>
-                    <input 
-                        type="text" 
-                        class="w-full px-4 py-2 border border-green-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
-                        placeholder="username"
-                        value="johndoe"
-                    >
-                    <p class="text-green-600 text-sm mt-1">Username is available</p>
-                    <!-- 
-                        border-green-500: Green border for success state
-                        text-green-600: Green text for success message
-                        Visual feedback helps users understand form state
-                    -->
-                </div>
-            </form>
-        </div>
+        TASK 1: Basic Input Styling
 
-        <!-- 
-            TASK 7: Complete Registration Form
-            Build a full registration form with all elements
-            
-            Instructions:
-            1. Combine all form elements learned
-            2. Add proper spacing and layout
-            3. Style submit button
-            4. Use grid or flex for multi-column layout if needed
-        -->
-        <div class="bg-white p-6 rounded-lg mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 7: Complete Registration Form</h2>
-            <form class="space-y-6 max-w-2xl">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-gray-700 font-medium mb-2">First Name</label>
-                        <input 
-                            type="text" 
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                            placeholder="John"
-                        >
-                    </div>
-                    <div>
-                        <label class="block text-gray-700 font-medium mb-2">Last Name</label>
-                        <input 
-                            type="text" 
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                            placeholder="Doe"
-                        >
-                    </div>
-                </div>
-                
-                <div>
-                    <label class="block text-gray-700 font-medium mb-2">Email</label>
-                    <input 
-                        type="email" 
-                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="email@example.com"
-                    >
-                </div>
-                
-                <div>
-                    <label class="block text-gray-700 font-medium mb-2">Password</label>
-                    <input 
-                        type="password" 
-                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="Create a password"
-                    >
-                </div>
-                
-                <div>
-                    <label class="block text-gray-700 font-medium mb-2">Bio</label>
-                    <textarea 
-                        rows="4"
-                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-                        placeholder="Tell us about yourself..."
-                    ></textarea>
-                </div>
-                
-                <div class="flex items-center space-x-2">
-                    <input 
-                        type="checkbox" 
-                        id="newsletter"
-                        class="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                    >
-                    <label for="newsletter" class="text-gray-700">Subscribe to newsletter</label>
-                </div>
-                
-                <button 
-                    type="submit"
-                    class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
-                >
-                    Create Account
-                </button>
-                <!-- 
-                    grid grid-cols-1 md:grid-cols-2: Responsive 2-column layout
-                    max-w-2xl: Maximum width for form container
-                    w-full: Full width submit button
-                    Combining all form elements creates a complete registration form
-                -->
-            </form>
-        </div>
+        Learn to style input fields
 
-        <!-- Navigation -->
-        <div class="mt-8 flex justify-between">
-            <a href="../level6/six.html" class="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
-                ← Previous Level
-            </a>
-            <a href="../level8/eight.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                Next Level: Advanced Styling →
-            </a>
-        </div>
-    </div>
-</body>
-</html>
+        Instructions:
 
+        1. Style an input with:
+
+        - w-full (full width)
+
+        - px-4 py-2 (padding)
+
+        - border border-gray-300 (border)
+
+        - rounded-lg (rounded corners)
+
+        - focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent (focus styles)
+
+        -->
+
+        <div class="bg-white p-6 rounded-lg mb-6">
+
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 1: Styled Input</h2>
+
+            <form class="space-y-4">
+
+                <div>
+
+                    <label class="block text-gray-700 font-medium mb-2">Name</label>
+
+                    <input
+
+                        type="text"
+
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+
+                        placeholder="Enter your name"
+
+                    />
+
+                </div>
+
+            </form>
+
+        </div>
+
+        <!--
+
+        TASK 2: Form Layout with Labels
+
+        Create a proper form with labels and spacing
+
+        Instructions:
+
+        1. Use flex or grid for layout
+
+        2. Add labels with proper spacing
+
+        3. Style inputs consistently
+
+        4. Add mb-4 or space-y-4 for vertical spacing
+
+        -->
+
+        <div class="bg-white p-6 rounded-lg mb-6">
+
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 2: Complete Form</h2>
+
+            <form class="space-y-4">
+
+                <div>
+
+                    <label class="block text-gray-700 font-medium mb-2">Email Address</label>
+
+                    <input
+
+                        type="email"
+
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+
+                        placeholder="email@example.com"
+
+                    />
+
+                </div>
+
+                <div>
+
+                    <label class="block text-gray-700 font-medium mb-2">Password</label>
+
+                    <input
+
+                        type="password"
+
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+
+                        placeholder="Enter password"
+
+                    />
+
+                </div>
+
+            </form>
+
+        </div>
+
+        <!--
+
+        TASK 3: Textarea Styling
+
+        Style textarea elements
+
+        Instructions:
+
+        1. Apply similar styling to textarea
+
+        2. Add resize-none to disable resizing (optional)
+
+        3. Add rows attribute for height
+
+        -->
+
+        <div class="bg-white p-6 rounded-lg mb-6">
+
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Task 3: Textarea Styling</h2>
+
+            <form>
+
+                <div>
+
+                    <label class="block text-gray-700 font-medium mb-2">Message</label>
